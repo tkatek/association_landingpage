@@ -1,73 +1,82 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحة هبوط - الجمعية</title>
-    <link rel="stylesheet" href="hero.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Section</title>
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="hero.css" />
+  </head>
+  <body>
+    <!-- START: Hero Section -->
+    <section class="hero-clean" dir="rtl">
+      <div class="container">
+        <!-- 1. The Badge: Focused on the "New Season" or "Registration" -->
+        <a href="#contact" class="hero-badge">
+          <span class="badge-label">اكتشف</span>
+          <span class="badge-text"> أكثر من 20 نادياً وورشة في انتظارك ! </span>
+          <i class="ri-arrow-left-line badge-icon"></i>
+        </a>
 
-    <div class="navbar-placeholder">
+        <!-- 2. Main Text -->
+        <h1 class="hero-title">
+          فضاءك للإبداع، <span class="highlight">التعلم</span>، والمشاركة.
+        </h1>
+
+        <p class="hero-desc">
+          دار الشباب كبور الشهداء تفتح أبوابها لكل الطاقات الشابة. انضم إلى
+          مجتمعنا واستفد من ورشات، أنشطة رياضية، وفعاليات ثقافية طوال السنة.
+        </p>
+
+        <!-- 3. Buttons: Specific to a Youth Center -->
+        <div class="hero-buttons">
+          <!-- Primary: Join / Register -->
+          <a href="#contact" class="btn btn-primary">
+              <i class="ri-file-edit-line btn-icon"></i>
+            زورونا للتسجيل
+          </a>
+
+          <!-- Secondary: Browse Clubs -->
+          <a href="#activities" class="btn btn-secondary">
+             <i class="ri-window-2-line btn-icon-right"></i>
+                      اكتشف برامجنا
+
+          </a>
         </div>
 
-    <main class="hero-section">
-        <div class="hero-content-container">
-            <div class="hero-text">
-                <p class="section-tag">قِسم البطل</p> 
-                <h1>
-                    متّمم لقعة الآمال، **عناية متفانية** <br>
-                    لقدرة عن مساعينا الحقيقية
-                </h1>
-                <p class="sub-text">
-                    نحن نسعى للنجاح الدائم من خلال الالتزام، ونقدم الدعم اللازم لتحقيق أهداف الجمعية والمستفيدين بمسؤولية وشفافية كاملة.
-                </p>
-                <div class="cta-buttons">
-                    <button class="cta-primary">
-                        انضم إلينا الآن
-                    </button>
-                    <button class="cta-secondary">
-                        قصص نجاحنا
-                    </button>
-                </div>
+        <!-- 4. Statistics: Real Impact Numbers -->
+        <div class="stats-section">
+          <span class="stats-label">أرقام نفتخر بها</span>
+
+          <div class="stats-grid">
+            <div class="stat-item">
+              <h2 class="stat-number">+1500</h2>
+              <p class="stat-text">منخرط</p>
             </div>
 
-            <div class="hero-images-cluster">
-                
-                <div class="image-wrapper main-img">
-                    <img src="/media/business-success-concept-wooden-table-top-view-hands-protecting-wooden-figures-people.jpg" alt="أيدي تحمي فريق من المجسمات الخشبية" class="image-style-1">
-                </div>
-                
-                <div class="image-wrapper middle-img">
-                    <img src="/media/e3561be2c777b8b3b5dbf95dcf359f9d.jpg" alt="صبي يضحك بفرح" class="image-style-2">
-                </div>
-
-                <div class="image-wrapper right-img">
-                    <img src="/media/73496669119b34a1dd1ab91ffd626f68.jpg" alt="معلمة تتحدث إلى طلابها" class="image-style-3">
-                </div>
-                
-                <div class="image-wrapper extra-img">
-                    <img src="/media/football-team-players-field.jpg" alt="فريق كرة قدم سعيد" class="image-style-4">
-                </div>
+            <div class="stat-item">
+              <h2 class="stat-number">+15</h2>
+              <p class="stat-text">نادي وورشة</p>
             </div>
+
+            <div class="stat-item">
+              <h2 class="stat-number">+50</h2>
+              <p class="stat-text">نشاط سنوي</p>
+            </div>
+
+            <div class="stat-item">
+              <h2 class="stat-number">100%</h2>
+              <p class="stat-text">طاقة وإبداع</p>
+            </div>
+          </div>
         </div>
-
-        <div class="stats-bar">
-            <div class="stat-item">
-                <span class="stat-number">+50</span>
-                <span class="stat-label">مشروع مكتمل</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">+20</span>
-                <span class="stat-label">متطوع نشط</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">20%</span>
-                <span class="stat-label">زيادة في الدعم</span>
-            </div>
-        </div>
-    </main>
-    
-</body>
+      </div>
+    </section>
+  </body>
 </html>
