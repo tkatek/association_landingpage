@@ -1,0 +1,242 @@
+/* تصميم عام للتذييل */
+.footer-container {
+    background-color: #232323; /* لون خلفية داكن */
+    color: #f0f0f0; /* لون النص الفاتح */
+    padding: 30px 5%;
+    font-family: Arial, sans-serif;
+    direction: rtl; /* لضمان دعم اللغة العربية بشكل كامل */
+    overflow: hidden; /* لمنع أي مشاكل في التخطيط */
+}
+
+/* القسم العلوي (للاشتراك) */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #444; /* خط فاصل */
+}
+
+.footer-top p {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.subscribe-form input[type="email"] {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 250px;
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    background-color: #ff5722; /* لون برتقالي بارز */
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: -4px; /* لدمج الزر مع حقل الإدخال */
+}
+
+.subscribe-form button:hover {
+    background-color: #e64a19;
+}
+
+/* القسم الرئيسي (المحتوى) */
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* مسافة بين الأقسام */
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.ft-section {
+    flex: 1; /* توزيع المساحة بالتساوي */
+    min-width: 250px; /* للتحكم في كيفية توزيع العناصر على الشاشات الأصغر */
+}
+
+/* معلومات العلامة التجارية والروابط الاجتماعية */
+.brand-info .logo {
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 10px;
+    align-self: center;
+}
+.brand-info{
+}
+
+.brand-name {
+    color: #ff5722;
+    margin: 5px 0;
+    font-size: 1.5em;
+}
+
+.brand-info .slogan {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* أيقونات التواصل الاجتماعي */
+.social-links a {
+    color: #f0f0f0;
+    font-size: 1.5em;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff5722;
+}
+
+/* قائمة الروابط */
+.links-group h4, .contact-info h4 {
+    border-bottom: 2px solid #ff5722;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    display: inline-block; /* لجعل الخط تحت العنوان فقط */
+}
+.links-group{
+}
+
+.links-group ul, .contact-info ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.links-group li, .contact-info li {
+    margin-bottom: 10px;
+    border-bottom: solid 1px #444;
+    padding: 5px 0;
+}
+
+.links-group a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.links-group a:hover {
+    color: #ff5722;
+}
+
+/* معلومات الاتصال والخريطة */
+.contact-info li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.95em;
+}
+
+.contact-info li i {
+    color: #ff5722;
+    margin-left: 10px;
+    margin-top: 4px; /* لمواءمة الأيقونة مع النص */
+}
+
+.contact-info li span {
+    color: #f0f0f0;
+}
+
+.map-container {
+    margin-top: 20px;
+    border: 3px solid #ff5722;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    display: block; /* لإزالة أي مساحة بيضاء أسفل الخريطة */
+}
+
+/* القسم السفلي (حقوق النشر) */
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.85em;
+    color: #aaa;
+}
+
+.policy-links a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.policy-links a:hover {
+    color: #ff5722;
+}
+
+/* الاستجابة لتغير حجم الشاشة (Media Queries) */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-top p {
+        margin-bottom: 15px;
+    }
+
+    .subscribe-form {
+        display: flex;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .subscribe-form input[type="email"] {
+        flex-grow: 1;
+        border-radius: 5px 0 0 5px;
+    }
+    
+    .subscribe-form button {
+        border-radius: 0 5px 5px 0;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .ft-section {
+        min-width: 100%;
+    }
+
+    .links-group h4, .contact-info h4 {
+        margin: 0 auto 15px; /* توسيط العنوان في الشاشات الصغيرة */
+    }
+
+    .contact-info ul {
+        text-align: right; /* لإعادة محاذاة النص على اليمين في العناصر غير التي تعرض flex */
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .contact-info li {
+        justify-content: flex-end; /* لتعمل المحاذاة اليمنى بشكل أفضل */
+    }
+
+    .social-links {
+        margin-bottom: 20px;
+    }
+}
+.brand-info{
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    height:00px ;
+    align-self: center;
+}
+
