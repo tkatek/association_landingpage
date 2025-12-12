@@ -46,8 +46,10 @@
     background-color: #ffe0b2;
     border-radius: 10px;
 }
-
+/* Update Sidebar Header Style */
 .sidebar-header h3 {
+    display: flex; /* Aligns icon and text */
+    align-items: center;
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 1.2rem;
@@ -55,6 +57,14 @@
     font-weight: 800;
     border-bottom: 2px solid #fff3e0;
     padding-bottom: 15px;
+}
+
+/* Style the Folder Icon */
+.sidebar-header h3 i {
+    color: #d35400; /* Dark Orange */
+    font-size: 1.4rem;
+    margin-left: 10px; /* Space between icon and text (since it's RTL) */
+    font-weight: 400; /* Makes the icon look sharp, not bold */
 }
 
 .category-list {
@@ -96,6 +106,7 @@
 }
 
 .content-header {
+    text-align: center;
     margin-bottom: 40px;
 }
 

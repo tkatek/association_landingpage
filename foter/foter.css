@@ -1,242 +1,194 @@
-/* تصميم عام للتذييل */
-.footer-container {
-    background-color: #232323; /* لون خلفية داكن */
-    color: #f0f0f0; /* لون النص الفاتح */
-    padding: 30px 5%;
-    font-family: Arial, sans-serif;
-    direction: rtl; /* لضمان دعم اللغة العربية بشكل كامل */
-    overflow: hidden; /* لمنع أي مشاكل في التخطيط */
+/* =========================================
+   FOOTER SECTION STYLES
+   ========================================= */
+
+.footer-section {
+    background-color: #2d3436; /* Dark Charcoal Background */
+    color: #dfe6e9; /* Light Grey Text */
+    font-family: 'Cairo', sans-serif;
+    padding-top: 70px;
+    position: relative;
+    border-top: 5px solid #d35400; /* Orange Top Border */
 }
 
-/* القسم العلوي (للاشتراك) */
-.footer-top {
+.footer-section .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- GRID LAYOUT --- */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr; /* 1st column is wider */
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+/* Headings */
+.footer-col h4 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Small orange line under headings */
+.footer-col h4::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #d35400;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+/* --- COLUMN 1: BRANDING --- */
+.footer-logo {
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #444; /* خط فاصل */
+    gap: 10px;
 }
 
-.footer-top p {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin: 0;
+.footer-logo i {
+    color: #d35400;
 }
 
-.subscribe-form input[type="email"] {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px 0 0 5px;
-    width: 250px;
+.footer-desc {
+    line-height: 1.8;
+    color: #b2bec3;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
 }
 
-.subscribe-form button {
-    padding: 10px 20px;
-    background-color: #ff5722; /* لون برتقالي بارز */
-    color: white;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-right: -4px; /* لدمج الزر مع حقل الإدخال */
-}
-
-.subscribe-form button:hover {
-    background-color: #e64a19;
-}
-
-/* القسم الرئيسي (المحتوى) */
-.footer-main {
+/* Social Media Icons */
+.social-links {
     display: flex;
-    justify-content: space-between;
-    gap: 40px; /* مسافة بين الأقسام */
-    flex-wrap: wrap;
-    padding: 20px 0;
+    gap: 15px;
 }
 
-.ft-section {
-    flex: 1; /* توزيع المساحة بالتساوي */
-    min-width: 250px; /* للتحكم في كيفية توزيع العناصر على الشاشات الأصغر */
-}
-
-/* معلومات العلامة التجارية والروابط الاجتماعية */
-.brand-info .logo {
-    max-width: 250px;
-    height: auto;
-    margin-bottom: 10px;
-    align-self: center;
-}
-.brand-info{
-}
-
-.brand-name {
-    color: #ff5722;
-    margin: 5px 0;
-    font-size: 1.5em;
-}
-
-.brand-info .slogan {
-    font-size: 0.9em;
-    color: #aaa;
-    margin-bottom: 20px;
-}
-
-/* أيقونات التواصل الاجتماعي */
 .social-links a {
-    color: #f0f0f0;
-    font-size: 1.5em;
-    margin-left: 15px;
-    transition: color 0.3s;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
 }
 
 .social-links a:hover {
-    color: #ff5722;
+    background: #d35400; /* Orange on hover */
+    transform: translateY(-3px);
 }
 
-/* قائمة الروابط */
-.links-group h4, .contact-info h4 {
-    border-bottom: 2px solid #ff5722;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    display: inline-block; /* لجعل الخط تحت العنوان فقط */
-}
-.links-group{
-}
-
-.links-group ul, .contact-info ul {
+/* --- COLUMNS 2 & 3: LINKS --- */
+.footer-links {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    margin: 0;
 }
 
-.links-group li, .contact-info li {
-    margin-bottom: 10px;
-    border-bottom: solid 1px #444;
-    padding: 5px 0;
+.footer-links li {
+    margin-bottom: 12px;
 }
 
-.links-group a {
-    color: #aaa;
+.footer-links a {
+    color: #b2bec3;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
 }
 
-.links-group a:hover {
-    color: #ff5722;
+.footer-links a i {
+    color: #d35400;
+    font-size: 0.8rem;
+    transition: margin 0.3s ease;
 }
 
-/* معلومات الاتصال والخريطة */
-.contact-info li {
+.footer-links a:hover {
+    color: #ff9f43; /* Light orange text */
+    padding-right: 5px; /* Move link slightly left */
+}
+
+/* --- COLUMN 4: CONTACT --- */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
     display: flex;
     align-items: flex-start;
-    font-size: 0.95em;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: #b2bec3;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-.contact-info li i {
-    color: #ff5722;
-    margin-left: 10px;
-    margin-top: 4px; /* لمواءمة الأيقونة مع النص */
+.contact-list .icon {
+    color: #d35400;
+    font-size: 1.2rem;
+    margin-top: 3px;
 }
 
-.contact-info li span {
-    color: #f0f0f0;
+/* --- COPYRIGHT BAR --- */
+.copyright-bar {
+    background-color: #22282a; /* Slightly darker than main footer */
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.map-container {
-    margin-top: 20px;
-    border: 3px solid #ff5722;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.map-container iframe {
-    display: block; /* لإزالة أي مساحة بيضاء أسفل الخريطة */
-}
-
-/* القسم السفلي (حقوق النشر) */
-.footer-bottom {
-    border-top: 1px solid #444;
-    padding-top: 20px;
-    text-align: center;
-    font-size: 0.85em;
-    color: #aaa;
-}
-
-.policy-links a {
-    color: #aaa;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s;
-}
-
-.policy-links a:hover {
-    color: #ff5722;
-}
-
-/* الاستجابة لتغير حجم الشاشة (Media Queries) */
-@media (max-width: 768px) {
-    .footer-top {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-top p {
-        margin-bottom: 15px;
-    }
-
-    .subscribe-form {
-        display: flex;
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
-    .subscribe-form input[type="email"] {
-        flex-grow: 1;
-        border-radius: 5px 0 0 5px;
-    }
-    
-    .subscribe-form button {
-        border-radius: 0 5px 5px 0;
-    }
-
-    .footer-main {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-
-    .ft-section {
-        min-width: 100%;
-    }
-
-    .links-group h4, .contact-info h4 {
-        margin: 0 auto 15px; /* توسيط العنوان في الشاشات الصغيرة */
-    }
-
-    .contact-info ul {
-        text-align: right; /* لإعادة محاذاة النص على اليمين في العناصر غير التي تعرض flex */
-        max-width: 300px;
-        margin: 0 auto;
-    }
-    
-    .contact-info li {
-        justify-content: flex-end; /* لتعمل المحاذاة اليمنى بشكل أفضل */
-    }
-
-    .social-links {
-        margin-bottom: 20px;
-    }
-}
-.brand-info{
+.copy-content {
     display: flex;
-    flex-direction: column;
-}
-.logo{
-    height:00px ;
-    align-self: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: #636e72;
 }
 
+.designer-credit a {
+    color: #d35400;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* =========================================
+   RESPONSIVENESS
+   ========================================= */
+
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 Columns on Tablet */
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* 1 Column on Mobile */
+        gap: 40px;
+    }
+    
+    .copy-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}

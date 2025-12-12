@@ -5,74 +5,97 @@
     <link rel="stylesheet" href="foter.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تذييل الصفحة</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <div class="footer-container">
-        <!-- <div class="footer-top">
-            <p>اشترك في نشرتنا الإخبارية لتلقي آخر المستجدات</p>
-            <div class="subscribe-form">
-                <input type="email" placeholder="أدخل بريدك الإلكتروني هنا">
-                <button type="submit">اشترك</button>
-            </div>
-        </div> -->
+   <!-- START: Footer Section -->
+<footer id="footer" class="footer-section" dir="rtl" lang="ar">
+    <div class="container">
+        
+        <!-- Top Grid: The Main Content -->
+        <div class="footer-grid">
 
-        <div class="footer-main">
-
-            <div class="ft-section ft-brand-links">
-                <div class="brand-info">
-                    <img src="/media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png" alt="شعار المؤسسة" class="logo"> 
-                   
-                </div>
-
-                  <div class="links-group">
-                    <h4>روابط سريعة</h4>
-                    <ul>
-                        <li><a href="#">الصفحة الرئيسية</a></li>
-                        <li><a href="#">الأنشطة</a></li>
-                        <li><a href="#">حول المؤسسة</a></li>
-                        <li><a href="#">تواصل معنا</a></li>
-                    </ul>
-                </div>
-
+            <!-- Column 1: Brand & Bio -->
+            <div class="footer-col brand-col">
+                <h3 class="footer-logo">
+                    <i class="ri-government-fill"></i> دار الشباب كبور الشهداء
+                </h3>
+                <p class="footer-desc">
+                    فضاء ثقافي، رياضي وتربوي يهدف إلى تمكين الشباب وتطوير مهاراتهم في بيئة آمنة ومحفزة للإبداع.
+                </p>
+                <!-- Social Media Icons -->
                 <div class="social-links">
-                     <h3 class="brand-name">دار الشباب</h3>
-                    <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="انستجرام"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="لينكد إن"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-
-              
-            </div>
-
-            <div class="ft-section ft-contact-map">
-                <div class="contact-info">
-                    <h4>تواصل معنا</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> شارع كبور شو، مراكش، المغرب</li>
-                        <li><i class="fas fa-phone-alt"></i> +212 600-123456</li>
-                        <li><i class="fas fa-envelope"> </i> exampel@gamil.com</li>
-                        
-                    </ul>
-                </div>
-                
-                <div class="map-container">
-                    <iframe src="https://maps.google.com/maps?q=Marrakesh,+Rue+Kbour+Chou&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></a>
+                    <a href="#"><i class="ri-whatsapp-line"></i></a>
                 </div>
             </div>
-        </div>
 
-        <div class="footer-bottom">
-            <p>&copy; <span id="current-year">2025</span> دار الشباب. جميع الحقوق محفوظة.</p>
-            <div class="policy-links">
-                <a href="#">سياسة الخصوصية</a>
-                <a href="#">الشروط والأحكام</a>
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li><a href="#home"><i class="ri-arrow-left-s-line"></i> الرئيسية</a></li>
+                    <li><a href="#about"><i class="ri-arrow-left-s-line"></i> من نحن</a></li>
+                    <li><a href="#activities"><i class="ri-arrow-left-s-line"></i> الأنشطة والبرامج</a></li>
+                    <li><a href="#register"><i class="ri-arrow-left-s-line"></i> التسجيل</a></li>
+                    <li><a href="#contact"><i class="ri-arrow-left-s-line"></i> اتصل بنا</a></li>
+                </ul>
             </div>
-        </div>
+
+            <!-- Column 3: Legal & Resources -->
+            <div class="footer-col">
+                <h4>موارد قانونية</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="ri-file-list-3-line"></i> القانون الداخلي</a></li>
+                    <li><a href="#"><i class="ri-shield-check-line"></i> سياسة الخصوصية</a></li>
+                    <li><a href="#"><i class="ri-question-line"></i> الأسئلة الشائعة</a></li>
+                    <li><a href="#"><i class="ri-shake-hands-line"></i> شركاؤنا</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Info -->
+            <div class="footer-col contact-col">
+                <h4>معلومات التواصل</h4>
+                <ul class="contact-list">
+                    <li>
+                        <i class="ri-map-pin-line icon"></i>
+                        <span>حي كبور الشهداء، المدينة القديمة، مراكش 40000</span>
+                    </li>
+                    <li>
+                        <i class="ri-phone-line icon"></i>
+                        <span>+212 524 00 00 00</span>
+                    </li>
+                    <li>
+                        <i class="ri-mail-send-line icon"></i>
+                        <span>contact@kbour-chohada.ma</span>
+                    </li>
+                    <li>
+                        <i class="ri-time-line icon"></i>
+                        <span>الاثنين - الجمعة: 09:00 - 20:00</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div> <!-- End Grid -->
 
     </div>
+
+    <!-- Bottom Bar: Copyright -->
+    <div class="copyright-bar">
+        <div class="container">
+            <div class="copy-content">
+                <p>© 2024 دار الشباب كبور الشهداء - جميع الحقوق محفوظة.</p>
+                <p class="designer-credit">تصميم وتطوير: <a href="#">اسمك أو وكالتك</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- END: Footer Section -->
 
 </body>
 </html>

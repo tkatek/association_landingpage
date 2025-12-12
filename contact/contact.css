@@ -1,0 +1,183 @@
+/* =========================================
+   CONTACT SPLIT SECTION (Map Left / Card Right)
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+
+
+.contact-split-section {
+    background-color: #fffbf5; /* Warm Cream Background */
+    padding: 80px 20px;
+    font-family: 'Cairo', sans-serif;
+    color: #2d3436;
+}
+
+/* Flex Container to hold Map & Card side-by-side */
+.contact-wrapper {
+     display: flex;
+    /* This forces Map to Left and Card to Right in RTL mode */
+    flex-direction: row-reverse; 
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* 'stretch' ensures they are exactly the same height */
+    align-items: stretch; 
+}
+
+/* --- 1. THE MAP (Left Side) --- */
+.map-container {
+    flex: 1.2; /* Map takes slightly more space (60%) */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    min-height: 320px; /* Ensures it's tall enough */
+    border: 5px solid #ffffff; /* White frame */
+}
+
+.map-container iframe {
+    filter: grayscale(10%); /* Slight professional filter */
+}
+
+/* --- 2. THE MODERN CARD (Right Side) --- */
+.info-card-modern {
+    flex: 0.8; /* Card takes remaining space (40%) */
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(211, 84, 0, 0.08); /* Soft Orange Shadow */
+    border: 1px solid #d35400; /* Orange Accent Bar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+}
+
+/* Header inside card */
+.info-card-modern h2 {
+    font-size: 1.8rem;
+    color: #d35400;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+}
+
+.info-card-modern p {
+    color: #636e72;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* The List Styles */
+.contact-list-modern {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.contact-list-modern li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #f1f2f6; /* Subtle separator */
+}
+
+.contact-list-modern li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Icon Box Style */
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background: #fff3e0; /* Light Orange */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d35400;
+    font-size: 1.5rem;
+    margin-left: 20px; /* Space in RTL */
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+/* Text Box Style */
+.text-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #b2bec3;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.value {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.ltr-text {
+    direction: ltr;
+    text-align: right;
+}
+
+/* Social Row at bottom */
+.social-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto; /* Pushes to bottom if card is tall */
+    padding-top: 20px;
+}
+
+.follow-us {
+    font-weight: 700;
+    color: #2d3436;
+    margin-left: 10px;
+}
+
+.social-row a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f1f2f6;
+    color: #636e72;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-row a:hover {
+    background: #d35400;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   RESPONSIVENESS
+   ========================================= */
+
+@media (max-width: 992px) {
+    .contact-wrapper {
+        flex-direction: column-reverse; /* Map on bottom, Info on top for Mobile */
+        gap: 30px;
+    }
+
+    .map-container {
+        height: 400px;
+        min-height: 400px;
+        flex: none; /* Reset flex */
+    }
+
+    .info-card-modern {
+        flex: none; /* Reset flex */
+        padding: 30px 20px;
+    }
+}

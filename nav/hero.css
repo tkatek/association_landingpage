@@ -1,49 +1,184 @@
-*{
+/* =========================================
+   1. GLOBAL RESETS
+   ========================================= */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.nav{
-    height: 10vh;
-    width: 100%;
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f9f9f9;
+    direction: rtl; /* Right to Left layout */
+}
+
+/* =========================================
+   2. NAVBAR CONTAINER
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    
+    /* Sticky Positioning */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #ff9f43; /* Light Orange Line */
+}
+
+/* --- Logo Styling --- */
+.logo-link {
     display: flex;
     align-items: center;
-    justify-content: space-between;
- 
-    background: rgba(255, 255, 255, 0.2); /* semi-transparent */
-  backdrop-filter: blur(10px); /* the frosted effect */
-  -webkit-backdrop-filter: blur(10px); /* for Safari */
-  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+   
 }
-.nav ul{
+
+.logo-img {
+    height: 50px; /* Adjust size */
+    width: auto;
+}
+
+/* --- Hamburger Icon (Hidden on Desktop) --- */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #d35400;
+}
+
+/* =========================================
+   3. MENU ITEMS (Desktop)
+   ========================================= */
+
+/* Wrapper for Links and Button */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Space between Links and Button */
+    width: 100%;
+    /* background-color: #ff9f43; */
+    justify-content: center; /* Pushes everything to the left in RTL */
+}
+
+/* UL List */
+.nav-links {
     display: flex;
     list-style: none;
-    height: 100%;
-    width: 50%;
-    align-items: center;
-    justify-content: space-around;
+    gap: 30px;
+    margin-right:auto ;
 }
-.nav ul li {
+
+/* Link Styles */
+.nav-links li a {
     text-decoration: none;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2d3436;
+    position: relative;
+    transition: color 0.3s ease;
 }
-.nav img{
-    height: 100%;
-    margin-left: 20px;
+
+/* Hover Color */
+.nav-links li a:hover {
+    color: #d35400;
 }
-.see_more{
-    margin-left: 20px;
-    padding: 10px 20px;
-    border: 1px solid rgb(60, 60, 60);
-    border-radius: 20px;
-    cursor: pointer;
+
+/* Orange Underline Effect */
+.nav-links li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #d35400;
+    margin: 5px auto 0;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* --- The "See More" Button --- */
+.see-more-btn {
     text-decoration: none;
-    color: black;
-    font-weight: bold;
-    transition: 0.3s;
+    background-color: #d35400; /* Dark Orange */
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(211, 84, 0, 0.2);
+    white-space: nowrap; /* Prevents text breaking */
+    margin-right: auto;
 }
-.see_more:hover{
-    background-color: rgb(255, 183, 134);
+
+.see-more-btn:hover {
+    background-color: #e67e22;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(211, 84, 0, 0.3);
+}
+
+/* =========================================
+   4. MOBILE RESPONSIVENESS
+   ========================================= */
+
+@media (max-width: 960px) {
+    
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    /* Show Hamburger */
+    .hamburger {
+        display: block;
+        z-index: 1001; /* Above everything */
+    }
+
+    /* Hide the Menu by default */
+    .nav-menu {
+        position: fixed;
+        right: -100%; /* Move off-screen */
+        top: 70px;   /* Below navbar height */
+        flex-direction: column;
+        background-color: #ffffff;
+        width: 100%;
+        height: auto; /* Or 100vh if you want full screen */
+        padding: 30px 0;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        gap: 25px;
+        justify-content: flex-start;
+    }
+
+    /* Active State (Added by JS) */
+    .nav-menu.active {
+        right: 0; /* Slide in */
+    }
+
+    /* Adjust Link direction for mobile */
+    .nav-links {
+        flex-direction: column;
+        gap: 25px;
+        margin-right: 0;
+    }
+
+    .nav-links li a {
+        font-size: 1.2rem;
+    }
+
+    /* Make button bigger on mobile */
+    .see-more-btn {
+        margin-right: 0;
+        width: 80%;
+        text-align: center;
+        padding: 12px;
+    }
 }
