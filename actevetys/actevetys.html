@@ -4,8 +4,240 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="activites.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+
 </head>
 <body>
-    dddd
+<!-- START: Activities Section -->
+<section id="activities" class="activities-section" dir="rtl" lang="ar">
+    <div class="container">
+        
+        <div class="layout-wrapper">
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h3>📂 التصنيفات</h3>
+                </div>
+                <ul class="category-list">
+                    <!-- Default Active = Sports -->
+                    <li class="cat-item active" data-filter="sports">
+                        <a href="javascript:void(0)"><i class="ri-football-line"></i> الأنشطة الرياضية</a>
+                    </li>
+                    <li class="cat-item" data-filter="culture">
+                        <a href="javascript:void(0)"><i class="ri-palette-line"></i> الأنشطة الثقافية</a>
+                    </li>
+                    <li class="cat-item" data-filter="education">
+                        <a href="javascript:void(0)"><i class="ri-book-open-line"></i> الدعم والتربية</a>
+                    </li>
+                    <li class="cat-item" data-filter="events">
+                        <a href="javascript:void(0)"><i class="ri-calendar-event-line"></i> الفعاليات الكبرى</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <div class="main-content">
+                <div class="content-header">
+                    <h2>أنشطتنا وبرامجنا</h2>
+                    <p>اكتشف عالماً من الفرص لتطوير مهاراتك وممارسة هواياتك المفضلة.</p>
+                </div>
+
+                <div class="activities-grid">
+
+                    <!-- ==========================
+                         CATEGORY: SPORTS (4 items)
+                    =========================== -->
+                    <div class="activity-card" data-category="sports">
+                        <div class="icon-circle"><i class="ri-football-line"></i></div>
+                        <h3>كرة القدم</h3>
+                        <p>دوريات محلية وتدريبات أسبوعية تحت إشراف مدربين.</p>
+                        <a href="#" class="learn-more">المزيد <i class="ri-arrow-left-line"></i></a>
+                    </div>
+
+                    <div class="activity-card" data-category="sports">
+                        <div class="icon-circle"><i class="ri-basketball-line"></i></div>
+                        <h3>كرة السلة</h3>
+                        <p>تعلم أساسيات اللعبة والمشاركة في بطولات الأحياء.</p>
+                        <a href="#" class="learn-more">المزيد <i class="ri-arrow-left-line"></i></a>
+                    </div>
+
+                    <div class="activity-card" data-category="sports">
+                        <div class="icon-circle"><i class="ri-sword-line"></i></div>
+                        <h3>فنون الدفاع عن النفس</h3>
+                        <p>دروس في التايكواندو والكاراتيه لتعزيز الانضباط.</p>
+                        <a href="#" class="learn-more">المزيد <i class="ri-arrow-left-line"></i></a>
+                    </div>
+
+                    <div class="activity-card" data-category="sports">
+                        <div class="icon-circle"><i class="ri-heart-pulse-line"></i></div>
+                        <h3>اللياقة البدنية</h3>
+                        <p>حصص أيروبيك وتقوية عضلات للحفاظ على الصحة.</p>
+                        <a href="#" class="learn-more">المزيد <i class="ri-arrow-left-line"></i></a>
+                    </div>
+
+                    <!-- ==========================
+                         CATEGORY: CULTURE (4 items)
+                    =========================== -->
+                    <div class="activity-card" data-category="culture">
+                        <div class="icon-circle"><i class="ri-masks-line"></i></div>
+                        <h3>المسرح</h3>
+                        <p>ورشات التشخيص المسرحي وفن الإلقاء والوقوف على الخشبة.</p>
+                        <a href="#" class="learn-more">المزيد <i class="ri-arrow-left-line"></i></a>
+                    </div>
+
+                    <div class="activity-card" data-category="culture">
+                        <div class="icon-circle"><i class="ri-music-2-line"></i></div>
+                        <h3>الموسيقى</h3>
+                        <p>تعلم العزف على الجيتار، البيانو، والآلات الإيقاعية.</p>
+                        <a href="#" class="learn-more">المزيد <i class="ri-arrow-left-line"></i></a>
+                    </div>
+
+                    <div class="activity-card" data-category="culture">
+                        <div class="icon-circle"><i class="ri-brush-line"></i></div>
+                        <h3>الفنون التشكيلية</h3>
+                        <p>الرسم، الصباغة، والأعمال اليدوية لتنمية الحس الفني.</p>
+                        <a href="#" class="learn-more">المزيد <i class="ri-arrow-left-line"></i></a>
+                    </div>
+
+                    <div class="activity-card" data-category="culture">
+                        <div class="icon-circle"><i class="ri-film-line"></i></div>
+                        <h3>النادي السينمائي</h3>
+                        <p>عروض أفلام هادفة ومناقشات سينمائية أسبوعية.</p>
+                        <a href="#" class="learn-more">المزيد <i class="ri-arrow-left-line"></i></a>
+                    </div>
+
+                    <!-- ==========================
+                         CATEGORY: EDUCATION (4 items)
+                    =========================== -->
+                    <div class="activity-card" data-category="education">
+                        <div class="icon-circle"><i class="ri-code-box-line"></i></div>
+                        <h3>البرمجة والإعلاميات</h3>
+                        <p>مقدمة في عالم الكودينغ والمهارات الرقمية الحديثة.</p>
+                        <a href="#" class="learn-more">المزيد <i class="ri-arrow-left-line"></i></a>
+                    </div>
+
+                    <div class="activity-card" data-category="education">
+                        <div class="icon-circle"><i class="ri-translate-2-line"></i></div>
+                        <h3>اللغات الحية</h3>
+                        <p>نادي اللغة الإنجليزية والفرنسية لتحسين التواصل.</p>
+                        <a href="#" class="learn-more">المزيد <i class="ri-arrow-left-line"></i></a>
+                    </div>
+
+                    <div class="activity-card" data-category="education">
+                        <div class="icon-circle"><i class="ri-book-read-line"></i></div>
+                        <h3>الدعم المدرسي</h3>
+                        <p>حصص تقوية للمستويات الإشهادية (الباكالوريا والتاسعة).</p>
+                        <a href="#" class="learn-more">المزيد <i class="ri-arrow-left-line"></i></a>
+                    </div>
+
+                    <div class="activity-card" data-category="education">
+                        <div class="icon-circle"><i class="ri-lightbulb-line"></i></div>
+                        <h3>التطوير الذاتي</h3>
+                        <p>ورشات في القيادة، التواصل، والتوجيه المهني.</p>
+                        <a href="#" class="learn-more">المزيد <i class="ri-arrow-left-line"></i></a>
+                    </div>
+
+                    <!-- ==========================
+                         CATEGORY: EVENTS (4 items)
+                    =========================== -->
+                    <div class="activity-card" data-category="events">
+                        <div class="icon-circle"><i class="ri-tent-line"></i></div>
+                        <h3>المخيمات الصيفية</h3>
+                        <p>رحلات ومخيمات جبلية وشاطئية للترفيه والتعلم.</p>
+                        <a href="#" class="learn-more">المزيد <i class="ri-arrow-left-line"></i></a>
+                    </div>
+
+                    <div class="activity-card" data-category="events">
+                        <div class="icon-circle"><i class="ri-trophy-line"></i></div>
+                        <h3>المسابقات والبطولات</h3>
+                        <p>تنظيم دوريات رمضان ومسابقات ثقافية كبرى.</p>
+                        <a href="#" class="learn-more">المزيد <i class="ri-arrow-left-line"></i></a>
+                    </div>
+
+                    <div class="activity-card" data-category="events">
+                        <div class="icon-circle"><i class="ri-hand-heart-line"></i></div>
+                        <h3>المبادرات التطوعية</h3>
+                        <p>حملات نظافة وتشجير وأعمال خيرية في المدينة.</p>
+                        <a href="#" class="learn-more">المزيد <i class="ri-arrow-left-line"></i></a>
+                    </div>
+
+                    <div class="activity-card" data-category="events">
+                        <div class="icon-circle"><i class="ri-presentation-line"></i></div>
+                        <h3>الندوات والمحاضرات</h3>
+                        <p>لقاءات مع مؤثرين وخبراء لمناقشة قضايا الشباب.</p>
+                        <a href="#" class="learn-more">المزيد <i class="ri-arrow-left-line"></i></a>
+                    </div>
+
+                    <!-- ==========================
+                         THE "SEE ALL" CARD
+                         Note: data-category="universal"
+                    =========================== -->
+                    <div class="activity-card see-all-card" data-category="universal">
+                        <div class="icon-circle white-icon"><i class="ri-layout-masonry-line"></i></div>
+                        <h3>اكتشف الكتالوج الكامل</h3>
+                        <p>لدينا المزيد من الأنشطة والأندية في انتظارك.</p>
+                        <a href="#" class="learn-more-btn">تصفح كل شيء</a>
+                    </div>
+
+                </div> <!-- End Grid -->
+            </div> <!-- End Main Content -->
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        const filterButtons = document.querySelectorAll('.cat-item');
+        const activityCards = document.querySelectorAll('.activity-card');
+
+        // Function to filter cards
+        function filterContent(category) {
+            activityCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+
+                // Logic: Match category OR if the card is "universal" (See All Card)
+                if (cardCategory === category || cardCategory === 'universal') {
+                    card.style.display = 'flex';
+                    // Reset animation
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(10px)';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 50);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Add Click Events to Sidebar
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // 1. Remove active class from all
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // 2. Add active class to clicked
+                button.classList.add('active');
+
+                // 3. Get filter value
+                const filterValue = button.getAttribute('data-filter');
+
+                // 4. Run Filter
+                filterContent(filterValue);
+            });
+        });
+
+        // Trigger Default (Sports) on load
+        // This ensures the page starts with Sports + See All visible
+        const defaultButton = document.querySelector('.cat-item.active');
+        if (defaultButton) {
+            const defaultFilter = defaultButton.getAttribute('data-filter');
+            filterContent(defaultFilter);
+        }
+    });
+</script>
 </body>
 </html>
