@@ -427,7 +427,7 @@ ul {
 .about-section {
   background-color: #ffffff;
   color: #2d3436;
-  padding: 80px 20px;
+  padding: 80px 20px 40px;
 }
 
 .about-section .container {
@@ -930,6 +930,82 @@ ul {
 }
 
 /* =========================================
+   FAQ SECTION (Accordion)
+   ========================================= */
+
+.faq-section {
+  background-color: #ffffff; /* Keep it white/clean */
+  padding: 80px 20px;
+}
+
+.faq-container {
+  max-width: 800px; /* Narrower width for better reading */
+  margin: 0 auto;
+}
+
+/* The Individual Question Card */
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  overflow: hidden; /* Hides content when closed */
+  transition: all 0.3s ease;
+}
+
+/* Active State (When Open) */
+.faq-item.active {
+  border-color: #d35400; /* Orange Border */
+  box-shadow: 0 10px 30px rgba(211, 84, 0, 0.1);
+}
+
+/* The Button (Question Header) */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 25px;
+  text-align: right; /* RTL alignment */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2d3436;
+}
+
+/* The Icon (+ sign) */
+.faq-question .icon {
+  font-size: 1.5rem;
+  color: #d35400;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate Icon when Active */
+.faq-item.active .faq-question .icon {
+  transform: rotate(45deg); /* Turns + into x */
+}
+
+/* The Answer Body */
+.faq-answer {
+  max-height: 0; /* Hidden by default */
+  overflow: hidden;
+  transition: max-height 0.3s ease; /* Smooth slide effect */
+  background-color: #fffbf5; /* Very light orange background for answer */
+}
+
+.faq-answer p {
+  padding: 25px;
+  margin: 0;
+  color: #636e72;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* =========================================
    CONTACT SPLIT SECTION
    ========================================= */
 
@@ -1083,13 +1159,115 @@ ul {
     gap: 30px;
   }
   .map-container {
-    height: 400px;
-    min-height: 400px;
+    height: 300px;
     flex: none;
   }
   .info-card-modern {
     flex: none;
     padding: 30px 20px;
+  }
+}
+
+/* =========================================
+   PARTNERS SECTION (Images)
+   ========================================= */
+
+.partners-section {
+  background-color: #ffffff; 
+  padding: 40px 0 80px;
+  border-top: 1px solid #eeeeee;
+}
+
+/* --- Modern Partners Header --- */
+
+.partners-header-modern {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px auto; /* Centered with bottom space */
+}
+
+.partners-header-modern h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #d35400;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Optional: Small orange line below the title (Like About Section) */
+.partners-header-modern h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ff9f43; /* Brand Orange */
+  margin: 8px auto 0;
+  border-radius: 10px;
+}
+
+.partners-header-modern p {
+  font-size: 1.1rem;
+  color: #636e72;
+  line-height: 1.6;
+}
+
+/* Flex Container */
+.partners-logos-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 80px; /* Generous space between logos */
+}
+
+/* Individual Logo Box */
+.partner-logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The Image Style */
+.partner-logo-box img {
+  /* 1. Control the Height: Ensures all logos are same height */
+  height: 70px; 
+  width: auto; /* Width adjusts automatically */
+  
+  /* 2. Safety: Max Width prevents huge logos on mobile */
+  max-width: 200px;
+  
+  /* 3. Fit: Ensures logos don't get squashed */
+  object-fit: contain;
+  
+  /* 4. The Professional Effect (Grayscale) */
+  filter: grayscale(100%); 
+  opacity: 0.5; /* Fade them out slightly */
+  
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* Hover Effect: Full Color & Full Opacity */
+.partner-logo-box img:hover {
+  filter: grayscale(0%); /* Color returns */
+  opacity: 1;            /* Full visibility */
+  transform: scale(1.1); /* Slight zoom */
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .partners-logos-grid {
+    gap: 30px;
+    display: grid;
+    /* Show 2 logos per row on mobile (2x2 Grid) */
+    grid-template-columns: repeat(2, 1fr); 
+    justify-items: center;
+  }
+
+  .partner-logo-box img {
+    height: 50px; /* Smaller on phone */
+    max-width: 100%;
   }
 }
 
@@ -1116,6 +1294,51 @@ ul {
   grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
   gap: 40px;
   padding-bottom: 50px;
+}
+/* --- Footer Brand Lockup (Logo + Text) --- */
+
+.footer-brand-lockup {
+  display: flex;
+  align-items: center; /* Vertically centers text with logo */
+  gap: 15px;           /* Space between the white box and the text */
+  text-decoration: none;
+  margin-bottom: 25px; /* Push the description down */
+  transition: scale 0.3s ease;
+
+}
+
+/* 1. White Box style */
+.footer-logo-box {
+  background-color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px; /* Soft corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;      /* Prevents box from shrinking on small screens */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 2. Image inside the box */
+.footer-logo-box img {
+  width: 55px;        /* Adjust this to fit your logo inside the box */
+  height: auto;
+
+}
+
+/* 3. The Text style */
+.footer-brand-text {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.4;    /* Good spacing for the 2 lines */
+  margin: 0;
+}
+
+/* 4. Hover Effect */
+.footer-brand-lockup:hover  {
+  scale: 1.06;    /* Text turns Orange when you hover the logo area */
 }
 
 .footer-col h4 {
