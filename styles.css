@@ -124,7 +124,7 @@ ul {
 
 /* --- Active Link (Added for JS ScrollSpy) --- */
 .nav-links li a.active-link {
-  color: #d35400;
+  color: #d35400 !important; 
 }
 
 .nav-links li a.active-link::after {
