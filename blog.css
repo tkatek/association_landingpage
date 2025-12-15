@@ -17,3 +17,16 @@ nav{
     padding: 10px 0;
     text-align: center;
 }
+nav a{
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
