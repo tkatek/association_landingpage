@@ -1,32 +1,364 @@
-body{
-    font-family: Arial, sans-serif;
+
+
+.container {
+    max-width: 1200px;  /* Limits the width */
+    margin: 0 auto;     /* Centers it in the middle */
+    padding: 0 20px;    /* Adds space on the left/right edges */
+    width: 100%;        /* Ensures responsiveness */
+}
+/* =========================================
+   BLOG HEADER (Minimalist)
+   ========================================= */
+.blog-header {
+    background-color: #ffffff;
+    padding: 80px 0 60px 0;
+    text-align: right; /* RTL Standard */
+}
+
+.sub-label {
+    color: #d35400; /* Orange */
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.blog-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #2d3436;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.blog-desc {
+    font-size: 1.2rem;
+    color: #636e72;
+    max-width: 600px;
     line-height: 1.6;
-    margin: 0;
+}
+
+/* =========================================
+   LAYOUT STRUCTURE
+   ========================================= */
+.blog-section {
+    padding-bottom: 100px;
+    background-color: #ffffff; /* Clean white BG */
+}
+
+.blog-container {
+    display: flex;
+    gap: 60px; /* Generous space between Sidebar and Content */
+    align-items: flex-start;
+}
+
+/* --- SIDEBAR --- */
+.blog-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 100px; /* Stays visible when scrolling */
+}
+
+/* Search Widget */
+.search-widget {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.search-widget input {
+    width: 100%;
+    padding: 12px 15px 12px 40px; /* Space for icon */
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.search-widget input:focus {
+    border-color: #d35400;
+    box-shadow: 0 0 0 3px rgba(211, 84, 0, 0.1);
+}
+
+.search-widget .icon {
+    position: absolute;
+    left: 15px; /* Icon on the left */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #b2bec3;
+}
+
+/* Categories Widget */
+.categories-widget h3 {
+    font-size: 1.1rem;
+    color: #2d3436;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.cat-links {
+    list-style: none;
     padding: 0;
-    background-color: #f4f4f4;
 }
-header{
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
+
+.cat-links li {
+    margin-bottom: 12px;
 }
-nav{
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
-}
-nav a{
-    color: #ffffff;
-    margin: 0 15px;
+
+.cat-links a {
     text-decoration: none;
+    color: #636e72;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s;
+    display: block;
 }
-nav a:hover{
+
+.cat-links a:hover,
+.cat-links a.active {
+    color: #d35400; /* Orange active state */
+}
+
+/* Sidebar CTA (Optional) */
+.sidebar-cta {
+    background-color: #fffbf5; /* Very light orange */
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 40px;
+    border: 1px solid #ffe0b2;
+}
+
+.sidebar-cta h4 {
+    margin: 0 0 10px 0;
+    color: #d35400;
+}
+
+.sidebar-cta a {
+    color: #2d3436;
+    font-weight: 700;
     text-decoration: underline;
 }
-.container{
-    width: 80%;
-    margin: auto;
+
+/* --- MAIN CONTENT (GRID) --- */
+.blog-content {
+    flex: 1; /* Takes remaining space */
+}
+
+.articles-grid {
+    display: grid;
+    /* 2 Columns matches the "Untitled UI" reference perfectly */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Article Card */
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    /* No border or shadow initially for the clean look */
+    transition: transform 0.3s ease;
+}
+
+.card-img-holder {
+    height: 240px;
+    border-radius: 12px;
     overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card-img-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.blog-card:hover .card-img-holder img {
+    transform: scale(1.05);
+}
+
+.card-category {
+    font-size: 0.85rem;
+    color: #d35400;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.card-title-link {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between; /* Pushes arrow to the left */
+    align-items: flex-start;
+    color: #2d3436;
+    margin-bottom: 10px;
+}
+
+.card-title-link h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.4;
+    transition: color 0.2s;
+}
+
+.arrow-icon {
+    font-size: 1.4rem;
+    margin-right: 15px; /* Space between text and arrow */
+    transform: rotate(180deg); /* Adjust for RTL if needed, usually 45deg up-left */
+    transition: transform 0.2s;
+}
+
+.blog-card:hover .card-title-link h3 {
+    color: #d35400;
+}
+
+.blog-card:hover .arrow-icon {
+    transform: translate(-3px, -3px) rotate(180deg);
+}
+
+.card-excerpt {
+    color: #636e72;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    /* Limit to 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Author Section */
+.card-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto; /* Pushes to bottom */
+}
+
+.card-author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: contain;
+    background: #f1f2f6;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-info .name {
+    font-weight: 700;
+    color: #2d3436;
+    font-size: 0.9rem;
+}
+
+.author-info .date {
+    font-size: 0.85rem;
+    color: #b2bec3;
+}
+
+/* --- PAGINATION (Untitled UI Style) --- */
+.pagination-clean {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.pagination-clean .prev-btn,
+.pagination-clean .next-btn {
+    text-decoration: none;
+    color: #636e72;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+}
+
+.pagination-clean .prev-btn:hover,
+.pagination-clean .next-btn:hover {
+    color: #d35400;
+}
+
+.pagination-clean .pages {
+    display: flex;
+    gap: 5px;
+}
+
+.pagination-clean .pages a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #636e72;
+}
+
+.pagination-clean .pages a.active {
+    background-color: #fff3e0; /* Very light orange */
+    color: #d35400;
+    font-weight: 700;
+}
+
+.pagination-clean .pages a:hover:not(.active) {
+    background-color: #f1f2f6;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 992px) {
+    .blog-container {
+        flex-direction: column;
+    }
+    
+    .blog-sidebar {
+        width: 100%;
+        position: static;
+        order: -1; /* Puts search bar ON TOP on mobile */
+        margin-bottom: 40px;
+    }
+    
+    .categories-widget, .sidebar-cta {
+        display: none; /* Hide categories on mobile to save space, or style differently */
+    }
+    
+    /* On Mobile, Show categories as horizontal scroll */
+    .blog-sidebar .categories-widget {
+        display: block;
+    }
+    
+    .cat-links {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        padding-bottom: 10px;
+    }
+    
+    .cat-links a {
+        white-space: nowrap;
+        background: #f1f2f6;
+        padding: 8px 15px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .articles-grid {
+        grid-template-columns: 1fr; /* 1 Column on phones */
+    }
+    
+    .blog-title {
+        font-size: 2.2rem;
+    }
 }
