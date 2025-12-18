@@ -111,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             other.querySelector('.faq-answer').style.maxHeight = 0;
                         }
                     });
+
                 });
             }
         });
@@ -128,5 +129,70 @@ document.addEventListener('DOMContentLoaded', function() {
                 backToTopBtn.classList.remove('show-btn');
             }
         });
+    }
+
+    // =========================================
+    // 4. ACTIVITIES PAGE ONLY: SEARCH & FILTER
+    // =========================================
+    
+    // Check if we are on the Activities Page
+    const blogGrid = document.querySelector('.articles-grid');
+
+    if (blogGrid) {
+        
+        const blogCards = document.querySelectorAll('.blog-card');
+        const catLinks = document.querySelectorAll('.cat-links a');
+        const searchInput = document.querySelector('.search-widget input');
+
+        // --- A. CATEGORY FILTER ---
+        catLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // Stop page from jumping to top
+
+                // 1. Switch Active Class
+                catLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+
+                // 2. Filter Cards
+                const filterValue = link.getAttribute('data-filter');
+
+                blogCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    
+                    if (filterValue === 'all' || filterValue === cardCategory) {
+                        card.style.display = 'flex';
+                        // Animation
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // --- B. SEARCH BAR LOGIC ---
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const searchText = e.target.value.toLowerCase();
+
+                blogCards.forEach(card => {
+                    // Get Title and Text from the card
+                    const title = card.querySelector('h3').innerText.toLowerCase();
+                    const excerpt = card.querySelector('.card-excerpt').innerText.toLowerCase();
+
+                    // Check if search text exists in Title OR Excerpt
+                    if (title.includes(searchText) || excerpt.includes(searchText)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        }
     }
 });

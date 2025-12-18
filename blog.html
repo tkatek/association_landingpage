@@ -82,12 +82,14 @@
           <div class="categories-widget">
             <h3>التصنيفات</h3>
             <ul class="cat-links">
-              <li><a href="#" class="active">عرض الكل</a></li>
-              <li><a href="#">الأنشطة الرياضية</a></li>
-              <li><a href="#">ورشات التكوين</a></li>
-              <li><a href="#">الفنون والثقافة</a></li>
-              <li><a href="#">المخيمات الصيفية</a></li>
-              <li><a href="#">قصص النجاح</a></li>
+              <!-- 1. "All" Filter -->
+              <li><a href="#" class="active" data-filter="all">عرض الكل</a></li>
+
+              <!-- 2. Specific Filters (English names are easier for code) -->
+              <li><a href="#" data-filter="sports">الأنشطة الرياضية</a></li>
+              <li><a href="#" data-filter="training">ورشات التكوين</a></li>
+              <li><a href="#" data-filter="arts">الفنون والثقافة</a></li>
+              <li><a href="#" data-filter="camps">المخيمات الصيفية</a></li>
             </ul>
           </div>
 
