@@ -19,33 +19,37 @@
     <link rel="stylesheet" href="blog.css" />
   </head>
   <body>
-    <!-- 1. NAVBAR (Copy from index.html) -->
     <nav class="navbar">
-      <!-- A. Hamburger Icon (Visible only on Mobile) -->
+      <!-- A. Hamburger Icon -->
       <div class="hamburger">
         <i class="ri-menu-3-line"></i>
       </div>
 
-      <!-- B. The Logo (Right Side) -->
-      <a href="#" class="logo-link">
-        <!-- Replace with your actual image path -->
+      <!-- B. The Logo (Link back to Home) -->
+      <a href="index.html" class="logo-link">
         <img
           src="/media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png"
           alt="Logo"
           class="logo-img" />
       </a>
 
-      <!-- C. The Menu Container (Links + Button) -->
-      <!-- This entire div gets hidden/shown on mobile -->
+      <!-- C. The Menu Container -->
       <div class="nav-menu">
         <ul class="nav-links">
-          <li><a href="#home"> الرئيسية</a></li>
-          <li><a href="#about"> من نحن</a></li>
-          <li><a href="#activities">الأنشطة والبرامج</a></li>
-          <li><a href="#contact">تواصل معنا</a></li>
+          <!-- 1. Go back to Home Page sections -->
+          <li><a href="index.html#home"> الرئيسية</a></li>
+          <li><a href="index.html#about"> من نحن</a></li>
+
+          <!-- 2. Stay on Current Page (Active) -->
+          <li>
+            <a href="activities.html" class="active-link">الأنشطة والبرامج</a>
+          </li>
+
+          <!-- 3. Go back to Contact on Home Page -->
+          <li><a href="index.html#contact">تواصل معنا</a></li>
         </ul>
 
-        <a href="#activities" class="see-more-btn">اكتشف برامجنا</a>
+        <a href="index.html#contact" class="see-more-btn">انضم إلينا</a>
       </div>
     </nav>
     <!-- 2. PAGE HEADER (Clean & Minimal) -->

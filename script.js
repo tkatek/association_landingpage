@@ -1,138 +1,125 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // =========================================
-    // 1. HAMBURGER MENU
+    // 1. GLOBAL: HAMBURGER MENU (Runs on ALL pages)
     // =========================================
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-links a');
-
-    if (hamburger) {
+    
+    if (hamburger && navMenu) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
     }
 
-    // Close menu when a link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (hamburger) hamburger.classList.remove('active');
-            if (navMenu) navMenu.classList.remove('active');
-        });
-    });
-
-
     // =========================================
-    // 2. SCROLL SPY (Active Link Detector) - IMPROVED
+    // 2. HOMEPAGE ONLY: SCROLL SPY & FILTERS
     // =========================================
-    const sections = document.querySelectorAll('section');
     
-    window.addEventListener('scroll', () => {
-        let current = '';
-        const scrollPosition = window.scrollY + 200; // Trigger point
+    // Check if we are on the Homepage by looking for the 'home' section
+    const homeSection = document.getElementById('home');
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            
-            // Check if we are currently inside this section
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
-            }
-        });
+    if (homeSection) {
+        // --- A. SCROLL SPY ---
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
 
-        // Apply active class
-        navLinks.forEach(link => {
-            link.classList.remove('active-link');
-            // Check if href matches the ID (e.g., href="#about" matches id="about")
-            if (current && link.getAttribute('href').includes(current)) {
-                link.classList.add('active-link');
-            }
-        });
-    });
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const scrollPosition = window.scrollY + 200;
 
-
-    // =========================================
-    // 3. ACTIVITIES FILTER (Categories)
-    // =========================================
-    const filterButtons = document.querySelectorAll('.cat-item');
-    const activityCards = document.querySelectorAll('.activity-card');
-
-    if (filterButtons.length > 0) {
-        // Function to filter
-        function filterContent(category) {
-            activityCards.forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
-                if (cardCategory === category || cardCategory === 'universal') {
-                    card.style.display = 'flex';
-                    // Reset animation
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(10px)';
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 50);
-                } else {
-                    card.style.display = 'none';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
                 }
             });
-        }
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                const filterValue = button.getAttribute('data-filter');
-                filterContent(filterValue);
+            navLinks.forEach(link => {
+                link.classList.remove('active-link');
+                // Only highlight if the link points to the current section ID
+                if (current && link.getAttribute('href').includes('#' + current)) {
+                    link.classList.add('active-link');
+                }
             });
         });
 
-        // Initialize with Sports
-        const defaultButton = document.querySelector('.cat-item.active');
-        if (defaultButton) {
-            filterContent(defaultButton.getAttribute('data-filter'));
-        }
-    }
+        // --- B. ACTIVITIES FILTER (Tabs) ---
+        const filterButtons = document.querySelectorAll('.cat-item');
+        const activityCards = document.querySelectorAll('.activity-card');
 
-
-    // =========================================
-    // 4. FAQ ACCORDION
-    // =========================================
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(item => {
-        const questionBtn = item.querySelector('.faq-question');
-        if (questionBtn) {
-            questionBtn.addEventListener('click', () => {
-                // Toggle active class
-                item.classList.toggle('active');
-                
-                // Slide logic
-                const answer = item.querySelector('.faq-answer');
-                if (item.classList.contains('active')) {
-                    answer.style.maxHeight = answer.scrollHeight + "px";
-                } else {
-                    answer.style.maxHeight = 0;
-                }
-
-                // Close others (Optional - keeps it clean)
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item && otherItem.classList.contains('active')) {
-                        otherItem.classList.remove('active');
-                        otherItem.querySelector('.faq-answer').style.maxHeight = 0;
+        if (filterButtons.length > 0) {
+            function filterContent(category) {
+                activityCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (cardCategory === category || cardCategory === 'universal') {
+                        card.style.display = 'flex';
+                        // Small animation reset
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(10px)';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        card.style.display = 'none';
                     }
                 });
-            });
-        }
-    });
+            }
 
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    const filterValue = button.getAttribute('data-filter');
+                    filterContent(filterValue);
+                });
+            });
+            
+            // Initialize default filter
+            const defaultButton = document.querySelector('.cat-item.active');
+            if (defaultButton) filterContent(defaultButton.getAttribute('data-filter'));
+        }
+
+        // --- C. FAQ ACCORDION ---
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const questionBtn = item.querySelector('.faq-question');
+            if(questionBtn) {
+                questionBtn.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                    const answer = item.querySelector('.faq-answer');
+                    if (item.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    } else {
+                        answer.style.maxHeight = 0;
+                    }
+                    // Close others
+                    faqItems.forEach(other => {
+                        if(other !== item && other.classList.contains('active')) {
+                            other.classList.remove('active');
+                            other.querySelector('.faq-answer').style.maxHeight = 0;
+                        }
+                    });
+                });
+            }
+        });
+    }
 
     // =========================================
-    // 5. BACK TO TOP BUTTON
+    // 3. GLOBAL: BACK TO TOP BUTTON
     // =========================================
     const backToTopBtn = document.getElementById('backToTop');
-    
     if (backToTopBtn) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
