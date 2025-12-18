@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>الأنشطة - دار الشباب كبور الشهداء</title>
-    
+
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet" />
 
     <!-- Link to your Main CSS -->
-     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <!-- Link to the New Blog CSS (You can put this inside styles.css too) -->
     <link rel="stylesheet" href="blog.css" />
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- 1. NAVBAR (Copy from index.html) -->
     <nav class="navbar">
       <!-- A. Hamburger Icon (Visible only on Mobile) -->
@@ -47,172 +50,192 @@
     </nav>
     <!-- 2. PAGE HEADER (Clean & Minimal) -->
     <header class="blog-header">
-        <div class="container">
-            <span class="sub-label">مدونتنا وأخبارنا</span>
-            <h1 class="blog-title">آخر قصص وأنشطة <br> دار الشباب</h1>
-            <p class="blog-desc">
-                اكتشف أحدث الورشات، الفعاليات، والمستجدات. اشترك في نشرتنا لتبقى على اطلاع دائم.
-            </p>
-        </div>
+      <div class="container">
+        <span class="sub-label">مدونتنا وأخبارنا</span>
+        <h1 class="blog-title">
+          آخر قصص وأنشطة <br />
+          دار الشباب
+        </h1>
+        <p class="blog-desc">
+          اكتشف أحدث الورشات، الفعاليات، والمستجدات. اشترك في نشرتنا لتبقى على
+          اطلاع دائم.
+        </p>
+      </div>
     </header>
 
     <!-- 3. MAIN LAYOUT (Sidebar + Grid) -->
     <section class="blog-section">
-        <div class="container blog-container">
-            
-            <!-- A. SIDEBAR (Right Side) -->
-            <aside class="blog-sidebar">
-                
-                <!-- Search Box -->
-                <div class="search-widget">
-                    <i class="ri-search-line icon"></i>
-                    <input type="text" placeholder="بحث..." />
+      <div class="container blog-container">
+        <!-- A. SIDEBAR (Right Side) -->
+        <aside class="blog-sidebar">
+          <!-- Search Box -->
+          <div class="search-widget">
+            <i class="ri-search-line icon"></i>
+            <input type="text" placeholder="بحث..." />
+          </div>
+
+          <!-- Categories Menu -->
+          <div class="categories-widget">
+            <h3>التصنيفات</h3>
+            <ul class="cat-links">
+              <li><a href="#" class="active">عرض الكل</a></li>
+              <li><a href="#">الأنشطة الرياضية</a></li>
+              <li><a href="#">ورشات التكوين</a></li>
+              <li><a href="#">الفنون والثقافة</a></li>
+              <li><a href="#">المخيمات الصيفية</a></li>
+              <li><a href="#">قصص النجاح</a></li>
+            </ul>
+          </div>
+
+          <!-- Call to Action (Optional) -->
+          <div class="sidebar-cta">
+            <h4>لديك فكرة نشاط؟</h4>
+            <p>نحن نرحب بمقترحات الشباب.</p>
+            <a href="#contact">تواصل معنا</a>
+          </div>
+        </aside>
+
+        <!-- B. CONTENT GRID (Left Side) -->
+        <div class="blog-content">
+          <div class="articles-grid">
+            <!-- Article 1 -->
+            <article class="blog-card">
+              <div class="card-img-holder">
+                <img
+                  src="media/football-team-players-field.jpg"
+                  alt="Activity Image" />
+              </div>
+              <div class="card-text">
+                <span class="card-category">رياضة</span>
+                <a href="activity-details.html" class="card-title-link">
+                  <h3>انطلاق دوري الأحياء لكرة القدم المصغرة</h3>
+                  <i class="ri-arrow-left-up-line arrow-icon"></i>
+                </a>
+                <p class="card-excerpt">
+                  شهدت دار الشباب يوم أمس انطلاقة قوية لدوري الأحياء بمشاركة 16
+                  فريقاً محلياً. تعرف على النتائج وجدول المباريات القادمة.
+                </p>
+                <div class="card-author">
+                  <img
+                    src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png"
+                    alt="Admin" />
+                  <div class="author-info">
+                    <span class="name">الإدارة</span>
+                    <span class="date">16 يناير 2024</span>
+                  </div>
                 </div>
+              </div>
+            </article>
 
-                <!-- Categories Menu -->
-                <div class="categories-widget">
-                    <h3>التصنيفات</h3>
-                    <ul class="cat-links">
-                        <li><a href="#" class="active">عرض الكل</a></li>
-                        <li><a href="#">الأنشطة الرياضية</a></li>
-                        <li><a href="#">ورشات التكوين</a></li>
-                        <li><a href="#">الفنون والثقافة</a></li>
-                        <li><a href="#">المخيمات الصيفية</a></li>
-                        <li><a href="#">قصص النجاح</a></li>
-                    </ul>
+            <!-- Article 2 -->
+            <article class="blog-card">
+              <div class="card-img-holder">
+                <img
+                  src="media/business-success-concept-wooden-table-top-view-hands-protecting-wooden-figures-people.jpg"
+                  alt="Activity Image" />
+              </div>
+              <div class="card-text">
+                <span class="card-category">تكوين</span>
+                <a href="activity-details.html" class="card-title-link">
+                  <h3>ورشة في مهارات القيادة الشابة</h3>
+                  <i class="ri-arrow-left-up-line arrow-icon"></i>
+                </a>
+                <p class="card-excerpt">
+                  كيف تصبح قائداً مؤثراً في مجتمعك؟ ورشة تفاعلية أطرها الأستاذ
+                  محمد، تناولت مفاهيم القيادة الحديثة والعمل الجماعي.
+                </p>
+                <div class="card-author">
+                  <img
+                    src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png"
+                    alt="Admin" />
+                  <div class="author-info">
+                    <span class="name">الإدارة</span>
+                    <span class="date">14 يناير 2024</span>
+                  </div>
                 </div>
+              </div>
+            </article>
 
-                <!-- Call to Action (Optional) -->
-                <div class="sidebar-cta">
-                    <h4>لديك فكرة نشاط؟</h4>
-                    <p>نحن نرحب بمقترحات الشباب.</p>
-                    <a href="#contact">تواصل معنا</a>
+            <!-- Article 3 -->
+            <article class="blog-card">
+              <div class="card-img-holder">
+                <img src="media/workshop-or-class.jpg" alt="Activity Image" />
+                <!-- Make sure this image exists -->
+              </div>
+              <div class="card-text">
+                <span class="card-category">فنون</span>
+                <a href="activity-details.html" class="card-title-link">
+                  <h3>معرض الرسم التشكيلي للمواهب الصاعدة</h3>
+                  <i class="ri-arrow-left-up-line arrow-icon"></i>
+                </a>
+                <p class="card-excerpt">
+                  لوحات فنية مبهرة بأيادي شباب الحي. ندعوكم لزيارة المعرض
+                  المفتوح طيلة أيام الأسبوع في بهو الدار.
+                </p>
+                <div class="card-author">
+                  <img
+                    src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png"
+                    alt="Admin" />
+                  <div class="author-info">
+                    <span class="name">نادي الفنون</span>
+                    <span class="date">10 يناير 2024</span>
+                  </div>
                 </div>
+              </div>
+            </article>
 
-            </aside>
-
-            <!-- B. CONTENT GRID (Left Side) -->
-            <div class="blog-content">
-                
-                <div class="articles-grid">
-                    
-                    <!-- Article 1 -->
-                    <article class="blog-card">
-                        <div class="card-img-holder">
-                            <img src="media/football-team-players-field.jpg" alt="Activity Image">
-                        </div>
-                        <div class="card-text">
-                            <span class="card-category">رياضة</span>
-                            <a href="activity-details.html" class="card-title-link">
-                                <h3>انطلاق دوري الأحياء لكرة القدم المصغرة</h3>
-                                <i class="ri-arrow-left-up-line arrow-icon"></i>
-                            </a>
-                            <p class="card-excerpt">
-                                شهدت دار الشباب يوم أمس انطلاقة قوية لدوري الأحياء بمشاركة 16 فريقاً محلياً. تعرف على النتائج وجدول المباريات القادمة.
-                            </p>
-                            <div class="card-author">
-                                <img src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png" alt="Admin">
-                                <div class="author-info">
-                                    <span class="name">الإدارة</span>
-                                    <span class="date">16 يناير 2024</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Article 2 -->
-                    <article class="blog-card">
-                        <div class="card-img-holder">
-                            <img src="media/business-success-concept-wooden-table-top-view-hands-protecting-wooden-figures-people.jpg" alt="Activity Image">
-                        </div>
-                        <div class="card-text">
-                            <span class="card-category">تكوين</span>
-                            <a href="activity-details.html" class="card-title-link">
-                                <h3>ورشة في مهارات القيادة الشابة</h3>
-                                <i class="ri-arrow-left-up-line arrow-icon"></i>
-                            </a>
-                            <p class="card-excerpt">
-                                كيف تصبح قائداً مؤثراً في مجتمعك؟ ورشة تفاعلية أطرها الأستاذ محمد، تناولت مفاهيم القيادة الحديثة والعمل الجماعي.
-                            </p>
-                            <div class="card-author">
-                                <img src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png" alt="Admin">
-                                <div class="author-info">
-                                    <span class="name">الإدارة</span>
-                                    <span class="date">14 يناير 2024</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Article 3 -->
-                    <article class="blog-card">
-                        <div class="card-img-holder">
-                            <img src="media/workshop-or-class.jpg" alt="Activity Image"> <!-- Make sure this image exists -->
-                        </div>
-                        <div class="card-text">
-                            <span class="card-category">فنون</span>
-                            <a href="activity-details.html" class="card-title-link">
-                                <h3>معرض الرسم التشكيلي للمواهب الصاعدة</h3>
-                                <i class="ri-arrow-left-up-line arrow-icon"></i>
-                            </a>
-                            <p class="card-excerpt">
-                                لوحات فنية مبهرة بأيادي شباب الحي. ندعوكم لزيارة المعرض المفتوح طيلة أيام الأسبوع في بهو الدار.
-                            </p>
-                            <div class="card-author">
-                                <img src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png" alt="Admin">
-                                <div class="author-info">
-                                    <span class="name">نادي الفنون</span>
-                                    <span class="date">10 يناير 2024</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Article 4 -->
-                    <article class="blog-card">
-                        <div class="card-img-holder">
-                            <img src="media/football-team-players-field.jpg" alt="Activity Image">
-                        </div>
-                        <div class="card-text">
-                            <span class="card-category">مخيمات</span>
-                            <a href="activity-details.html" class="card-title-link">
-                                <h3>فتح باب التسجيل للمخيم الصيفي 2024</h3>
-                                <i class="ri-arrow-left-up-line arrow-icon"></i>
-                            </a>
-                            <p class="card-excerpt">
-                                هل أنت مستعد للمغامرة؟ انطلق التسجيل للمرحلة الأولى من المخيم الصيفي بمدينة إفران. المقاعد محدودة.
-                            </p>
-                            <div class="card-author">
-                                <img src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png" alt="Admin">
-                                <div class="author-info">
-                                    <span class="name">الإدارة</span>
-                                    <span class="date">05 يناير 2024</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
+            <!-- Article 4 -->
+            <article class="blog-card">
+              <div class="card-img-holder">
+                <img
+                  src="media/football-team-players-field.jpg"
+                  alt="Activity Image" />
+              </div>
+              <div class="card-text">
+                <span class="card-category">مخيمات</span>
+                <a href="activity-details.html" class="card-title-link">
+                  <h3>فتح باب التسجيل للمخيم الصيفي 2024</h3>
+                  <i class="ri-arrow-left-up-line arrow-icon"></i>
+                </a>
+                <p class="card-excerpt">
+                  هل أنت مستعد للمغامرة؟ انطلق التسجيل للمرحلة الأولى من المخيم
+                  الصيفي بمدينة إفران. المقاعد محدودة.
+                </p>
+                <div class="card-author">
+                  <img
+                    src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png"
+                    alt="Admin" />
+                  <div class="author-info">
+                    <span class="name">الإدارة</span>
+                    <span class="date">05 يناير 2024</span>
+                  </div>
                 </div>
+              </div>
+            </article>
+          </div>
 
-                <!-- Pagination (Bottom) -->
-                <div class="pagination-clean">
-                    <a href="#" class="prev-btn"><i class="ri-arrow-right-line"></i> السابق</a>
-                    <div class="pages">
-                        <a href="#" class="active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <span>...</span>
-                        <a href="#">8</a>
-                    </div>
-                    <a href="#" class="next-btn">التالي <i class="ri-arrow-left-line"></i></a>
-                </div>
-
+          <!-- Pagination (Bottom) -->
+          <div class="pagination-clean">
+            <a href="#" class="prev-btn"
+              ><i class="ri-arrow-right-line"></i> السابق</a
+            >
+            <div class="pages">
+              <a href="#" class="active">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <span>...</span>
+              <a href="#">8</a>
             </div>
+            <a href="#" class="next-btn"
+              >التالي <i class="ri-arrow-left-line"></i
+            ></a>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- 4. FOOTER (Reuse existing) -->
     <!-- ... Paste your Footer code here ... -->
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
