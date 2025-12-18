@@ -209,7 +209,7 @@
 .arrow-icon {
     font-size: 1.4rem;
     margin-right: 15px; /* Space between text and arrow */
-    transform: rotate(180deg); /* Adjust for RTL if needed, usually 45deg up-left */
+    transform: rotate(0deg); 
     transition: transform 0.2s;
 }
 
@@ -218,7 +218,7 @@
 }
 
 .blog-card:hover .arrow-icon {
-    transform: translate(-3px, -3px) rotate(180deg);
+    transform: translate(-3px, -3px);
 }
 
 .card-excerpt {
