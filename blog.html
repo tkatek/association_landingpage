@@ -8,10 +8,12 @@
     <!-- Fonts & Icons -->
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
 
     <!-- Link to your Main CSS -->
     <link rel="stylesheet" href="styles.css" />
@@ -30,7 +32,8 @@
         <img
           src="/media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png"
           alt="Logo"
-          class="logo-img" />
+          class="logo-img"
+        />
       </a>
 
       <!-- C. The Menu Container -->
@@ -104,116 +107,251 @@
         <!-- B. CONTENT GRID (Left Side) -->
         <div class="blog-content">
           <div class="articles-grid">
-            <!-- Article 1 -->
-            <article class="blog-card">
+            <!-- =========================================
+     CATEGORY: SPORTS (الأنشطة الرياضية)
+     ========================================= -->
+            <!-- Card 1: Football -->
+            <article class="blog-card" data-category="sports">
               <div class="card-img-holder">
+                <!-- Use a football image -->
                 <img
                   src="media/football-team-players-field.jpg"
-                  alt="Activity Image" />
+                  alt="دوري كرة القدم"
+                />
               </div>
               <div class="card-text">
-                <span class="card-category">رياضة</span>
+                <span class="card-category">الأنشطة الرياضية</span>
                 <a href="activity-details.html" class="card-title-link">
-                  <h3>انطلاق دوري الأحياء لكرة القدم المصغرة</h3>
+                  <h3>انطلاق دوري رمضان لكرة القدم المصغرة</h3>
                   <i class="ri-arrow-left-up-line arrow-icon"></i>
                 </a>
                 <p class="card-excerpt">
-                  شهدت دار الشباب يوم أمس انطلاقة قوية لدوري الأحياء بمشاركة 16
-                  فريقاً محلياً. تعرف على النتائج وجدول المباريات القادمة.
+                  أجواء حماسية ومنافسة شريفة ميزت افتتاح دوري رمضان لهذا العام
+                  بمشاركة فرق الأحياء المجاورة. تابعوا النتائج.
                 </p>
                 <div class="card-author">
                   <img
                     src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png"
-                    alt="Admin" />
+                    alt="Admin"
+                  />
                   <div class="author-info">
-                    <span class="name">الإدارة</span>
-                    <span class="date">16 يناير 2024</span>
+                    <span class="name">اللجنة الرياضية</span>
+                    <span class="date">10 مارس 2024</span>
                   </div>
                 </div>
               </div>
             </article>
 
-            <!-- Article 2 -->
-            <article class="blog-card">
+            <!-- Card 2: Basketball -->
+            <article class="blog-card" data-category="sports">
+              <div class="card-img-holder">
+                <!-- Use a basketball image (or placeholder) -->
+                <img
+                  src="media/football-team-players-field.jpg"
+                  alt="كرة السلة"
+                />
+              </div>
+              <div class="card-text">
+                <span class="card-category">الأنشطة الرياضية</span>
+                <a href="activity-details.html" class="card-title-link">
+                  <h3>تدريبات مفتوحة في كرة السلة للإناث</h3>
+                  <i class="ri-arrow-left-up-line arrow-icon"></i>
+                </a>
+                <p class="card-excerpt">
+                  تعلن الدار عن افتتاح باب التسجيل في مدرسة كرة السلة الخاصة
+                  بالفتيات (أقل من 15 سنة) كل يوم أحد صباحاً.
+                </p>
+                <div class="card-author">
+                  <img
+                    src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png"
+                    alt="Admin"
+                  />
+                  <div class="author-info">
+                    <span class="name">المدربة سناء</span>
+                    <span class="date">05 مارس 2024</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- =========================================
+     CATEGORY: TRAINING (ورشات التكوين)
+     ========================================= -->
+            <!-- Card 3: Leadership -->
+            <article class="blog-card" data-category="training">
               <div class="card-img-holder">
                 <img
                   src="media/business-success-concept-wooden-table-top-view-hands-protecting-wooden-figures-people.jpg"
-                  alt="Activity Image" />
+                  alt="قيادة"
+                />
               </div>
               <div class="card-text">
-                <span class="card-category">تكوين</span>
+                <span class="card-category">ورشات التكوين</span>
                 <a href="activity-details.html" class="card-title-link">
-                  <h3>ورشة في مهارات القيادة الشابة</h3>
+                  <h3>ورشة "كيف تصنع مبادرتك الأولى؟"</h3>
                   <i class="ri-arrow-left-up-line arrow-icon"></i>
                 </a>
                 <p class="card-excerpt">
-                  كيف تصبح قائداً مؤثراً في مجتمعك؟ ورشة تفاعلية أطرها الأستاذ
-                  محمد، تناولت مفاهيم القيادة الحديثة والعمل الجماعي.
+                  دورة تكوينية تفاعلية لتعلم أساسيات التخطيط للمشاريع الجمعوية
+                  وإدارة فرق العمل التطوعية.
                 </p>
                 <div class="card-author">
                   <img
                     src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png"
-                    alt="Admin" />
+                    alt="Admin"
+                  />
                   <div class="author-info">
                     <span class="name">الإدارة</span>
-                    <span class="date">14 يناير 2024</span>
+                    <span class="date">22 فبراير 2024</span>
                   </div>
                 </div>
               </div>
             </article>
 
-            <!-- Article 3 -->
-            <article class="blog-card">
+            <!-- Card 4: Photography -->
+            <article class="blog-card" data-category="training">
               <div class="card-img-holder">
-                <img src="media/workshop-or-class.jpg" alt="Activity Image" />
-                <!-- Make sure this image exists -->
+                <img src="media/workshop-or-class.jpg" alt="تصوير" />
               </div>
               <div class="card-text">
-                <span class="card-category">فنون</span>
+                <span class="card-category">ورشات التكوين</span>
                 <a href="activity-details.html" class="card-title-link">
-                  <h3>معرض الرسم التشكيلي للمواهب الصاعدة</h3>
+                  <h3>أساسيات التصوير الفوتوغرافي للمبتدئين</h3>
                   <i class="ri-arrow-left-up-line arrow-icon"></i>
                 </a>
                 <p class="card-excerpt">
-                  لوحات فنية مبهرة بأيادي شباب الحي. ندعوكم لزيارة المعرض
-                  المفتوح طيلة أيام الأسبوع في بهو الدار.
+                  تعلم قواعد التكوين والإضاءة واستخدام الكاميرا الاحترافية في
+                  ورشة تطبيقية بحدائق المنارة.
                 </p>
                 <div class="card-author">
                   <img
                     src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png"
-                    alt="Admin" />
+                    alt="Admin"
+                  />
+                  <div class="author-info">
+                    <span class="name">نادي الصورة</span>
+                    <span class="date">18 فبراير 2024</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- =========================================
+     CATEGORY: ARTS (الفنون والثقافة)
+     ========================================= -->
+            <!-- Card 5: Theater -->
+            <article class="blog-card" data-category="arts">
+              <div class="card-img-holder">
+                <img src="media/workshop-or-class.jpg" alt="مسرح" />
+              </div>
+              <div class="card-text">
+                <span class="card-category">الفنون والثقافة</span>
+                <a href="activity-details.html" class="card-title-link">
+                  <h3>العرض المسرحي "أمل الغد"</h3>
+                  <i class="ri-arrow-left-up-line arrow-icon"></i>
+                </a>
+                <p class="card-excerpt">
+                  ندعوكم لحضور العرض الختامي لورشة المسرح، مسرحية تحاكي واقع
+                  الشباب وطموحاتهم بأسلوب فني راقٍ.
+                </p>
+                <div class="card-author">
+                  <img
+                    src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png"
+                    alt="Admin"
+                  />
+                  <div class="author-info">
+                    <span class="name">فرقة المشعل</span>
+                    <span class="date">15 يناير 2024</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 6: Painting Exhibition -->
+            <article class="blog-card" data-category="arts">
+              <div class="card-img-holder">
+                <img src="media/workshop-or-class.jpg" alt="رسم" />
+              </div>
+              <div class="card-text">
+                <span class="card-category">الفنون والثقافة</span>
+                <a href="activity-details.html" class="card-title-link">
+                  <h3>معرض الألوان: إبداعات أنامل صغيرة</h3>
+                  <i class="ri-arrow-left-up-line arrow-icon"></i>
+                </a>
+                <p class="card-excerpt">
+                  افتتاح معرض اللوحات التشكيلية الخاص بأطفال ورشة الرسم، رحلة في
+                  عالم الألوان والخيال البريء.
+                </p>
+                <div class="card-author">
+                  <img
+                    src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png"
+                    alt="Admin"
+                  />
                   <div class="author-info">
                     <span class="name">نادي الفنون</span>
-                    <span class="date">10 يناير 2024</span>
+                    <span class="date">02 يناير 2024</span>
                   </div>
                 </div>
               </div>
             </article>
 
-            <!-- Article 4 -->
-            <article class="blog-card">
+            <!-- =========================================
+     CATEGORY: CAMPS (المخيمات الصيفية)
+     ========================================= -->
+            <!-- Card 7: Summer Camp Registration -->
+            <article class="blog-card" data-category="camps">
               <div class="card-img-holder">
-                <img
-                  src="media/football-team-players-field.jpg"
-                  alt="Activity Image" />
+                <img src="media/football-team-players-field.jpg" alt="مخيم" />
               </div>
               <div class="card-text">
-                <span class="card-category">مخيمات</span>
+                <span class="card-category">المخيمات الصيفية</span>
                 <a href="activity-details.html" class="card-title-link">
-                  <h3>فتح باب التسجيل للمخيم الصيفي 2024</h3>
+                  <h3>التسجيل في المخيم الصيفي - المرحلة 2</h3>
                   <i class="ri-arrow-left-up-line arrow-icon"></i>
                 </a>
                 <p class="card-excerpt">
-                  هل أنت مستعد للمغامرة؟ انطلق التسجيل للمرحلة الأولى من المخيم
-                  الصيفي بمدينة إفران. المقاعد محدودة.
+                  انطلاق التسجيل للمرحلة الثانية من المخيم الجبلي بمدينة إفران.
+                  برنامج حافل بالمسابقات والرحلات الاستكشافية.
                 </p>
                 <div class="card-author">
                   <img
                     src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png"
-                    alt="Admin" />
+                    alt="Admin"
+                  />
                   <div class="author-info">
                     <span class="name">الإدارة</span>
-                    <span class="date">05 يناير 2024</span>
+                    <span class="date">01 يونيو 2024</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 8: Camp Memories -->
+            <article class="blog-card" data-category="camps">
+              <div class="card-img-holder">
+                <img
+                  src="media/business-success-concept-wooden-table-top-view-hands-protecting-wooden-figures-people.jpg"
+                  alt="ذكريات"
+                />
+              </div>
+              <div class="card-text">
+                <span class="card-category">المخيمات الصيفية</span>
+                <a href="activity-details.html" class="card-title-link">
+                  <h3>ألبوم صور: أجمل لحظات مخيم الصويرة</h3>
+                  <i class="ri-arrow-left-up-line arrow-icon"></i>
+                </a>
+                <p class="card-excerpt">
+                  استرجعوا معنا أجمل ذكريات المخيم الشاطئي بالصويرة. صور توثق
+                  لحظات الفرح والتعلم والعيش المشترك.
+                </p>
+                <div class="card-author">
+                  <img
+                    src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png"
+                    alt="Admin"
+                  />
+                  <div class="author-info">
+                    <span class="name">اللجنة الإعلامية</span>
+                    <span class="date">15 شتنبر 2023</span>
                   </div>
                 </div>
               </div>
@@ -240,12 +378,12 @@
       </div>
     </section>
 
-   <footer id="footer" class="footer-section" dir="rtl" lang="ar">
+    <footer id="footer" class="footer-section" dir="rtl" lang="ar">
       <div class="container">
         <!-- Top Grid: The Main Content -->
         <div class="footer-grid">
           <!-- Column 1: Brand & Bio -->
-          
+
           <div class="footer-col brand-col">
             <!-- NEW: Wrapper Link that holds both Logo + Text -->
             <a href="#home" class="footer-brand-lockup">
@@ -253,7 +391,8 @@
               <div class="footer-logo-box">
                 <img
                   src="/media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png"
-                  alt="Logo" />
+                  alt="Logo"
+                />
               </div>
 
               <!-- 2. The Text (Side by Side) -->
@@ -309,10 +448,14 @@
                 >
               </li>
               <li>
-                <a href="#faq"><i class="ri-question-line"></i> الأسئلة الشائعة</a>
+                <a href="#faq"
+                  ><i class="ri-question-line"></i> الأسئلة الشائعة</a
+                >
               </li>
               <li>
-                <a href="#partners"><i class="ri-shake-hands-line"></i> شركاؤنا</a>
+                <a href="#partners"
+                  ><i class="ri-shake-hands-line"></i> شركاؤنا</a
+                >
               </li>
             </ul>
           </div>
