@@ -12,8 +12,9 @@
    2. BLOG HEADER
    ========================================= */
 .blog-header {
-    background-color: #ffffff;
-    padding: 80px 0 60px 0;
+    background-color: #fffbf5;
+    border-bottom: 1px solid #ffe0b2;
+    padding: 80px 0 80px 0;
     text-align: right;
 }
 
@@ -41,10 +42,48 @@
     line-height: 1.6;
 }
 
+
+/* Make container relative so we can position the icon inside it */
+.header-content {
+    position: relative;
+    /* Optional: Limit height if it gets too tall */
+    overflow: hidden; 
+}
+
+/* Ensure text sits on TOP of the icon */
+.text-area {
+    position: relative;
+    z-index: 2;
+    max-width: 600px; /* Keep text readable */
+}
+
+/* The Giant Icon Style */
+.hero-watermark {
+    position: absolute;
+    left: 20px;          /* Sit on the left side */
+    bottom: 0px;       /* Peek from the bottom */
+    font-size: 14rem;    /* HUGE size */
+    color: #d35400;      /* Very subtle grey */
+     opacity: 0.6;
+    transform: rotate(15deg); /* Jaunty angle */
+    z-index: 1;
+    pointer-events: none; /* User clicks go through it */
+}
+
+/* Mobile Fix: Make it smaller on phones */
+@media (max-width: 768px) {
+    .hero-watermark {
+        font-size: 10rem;
+        left: -20px;
+        bottom: 0;
+        opacity: 0.5;
+    }
+}
 /* =========================================
    3. LAYOUT STRUCTURE
    ========================================= */
 .blog-section {
+    padding-top: 60px;
     padding-bottom: 100px;
     background-color: #ffffff;
 }
@@ -196,6 +235,7 @@
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 20px;
+    background-color: #636e72;
 }
 
 .card-img-holder img {
@@ -255,7 +295,7 @@
     margin-bottom: 20px;
     font-size: 1rem;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Limits text to 2 lines */
+ 
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
