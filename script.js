@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (blogGrid) {
         
         const blogCards = document.querySelectorAll('.blog-card');
-        const catLinks = document.querySelectorAll('.cat-links a');
+        const catLinks = document.querySelectorAll('.cat-item a');
         const searchInput = document.querySelector('.search-widget input');
 
         // --- A. CATEGORY FILTER ---

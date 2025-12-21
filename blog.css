@@ -1,22 +1,24 @@
-
-
-.container {
-    max-width: 1200px;  /* Limits the width */
-    margin: 0 auto;     /* Centers it in the middle */
-    padding: 0 20px;    /* Adds space on the left/right edges */
-    width: 100%;        /* Ensures responsiveness */
-}
 /* =========================================
-   BLOG HEADER (Minimalist)
+   1. GLOBAL CONTAINER
+   ========================================= */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* =========================================
+   2. BLOG HEADER
    ========================================= */
 .blog-header {
     background-color: #ffffff;
     padding: 80px 0 60px 0;
-    text-align: right; /* RTL Standard */
+    text-align: right;
 }
 
 .sub-label {
-    color: #d35400; /* Orange */
+    color: #d35400;
     font-weight: 700;
     font-size: 0.9rem;
     margin-bottom: 15px;
@@ -40,16 +42,16 @@
 }
 
 /* =========================================
-   LAYOUT STRUCTURE
+   3. LAYOUT STRUCTURE
    ========================================= */
 .blog-section {
     padding-bottom: 100px;
-    background-color: #ffffff; /* Clean white BG */
+    background-color: #ffffff;
 }
 
 .blog-container {
     display: flex;
-    gap: 60px; /* Generous space between Sidebar and Content */
+    gap: 60px;
     align-items: flex-start;
 }
 
@@ -58,7 +60,7 @@
     width: 280px;
     flex-shrink: 0;
     position: sticky;
-    top: 100px; /* Stays visible when scrolling */
+    top: 100px;
 }
 
 /* Search Widget */
@@ -69,7 +71,7 @@
 
 .search-widget input {
     width: 100%;
-    padding: 12px 15px 12px 40px; /* Space for icon */
+    padding: 12px 15px 12px 40px;
     border: 1px solid #dfe6e9;
     border-radius: 8px;
     font-family: 'Cairo', sans-serif;
@@ -85,13 +87,13 @@
 
 .search-widget .icon {
     position: absolute;
-    left: 15px; /* Icon on the left */
+    left: 15px;
     top: 50%;
     transform: translateY(-50%);
     color: #b2bec3;
 }
 
-/* Categories Widget */
+/* --- UPDATED SIDEBAR BUTTONS (Matches Landing Page) --- */
 .categories-widget h3 {
     font-size: 1.1rem;
     color: #2d3436;
@@ -99,32 +101,58 @@
     font-weight: 700;
 }
 
-.cat-links {
+/* Remove default list styles */
+.category-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.cat-links li {
-    margin-bottom: 12px;
+.category-list li {
+    margin-bottom: 10px;
 }
 
-.cat-links a {
-    text-decoration: none;
+/* The Button Style */
+.cat-item a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    
+    /* Default State: Light Grey */
+    background-color: #f1f2f6; 
     color: #636e72;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: color 0.2s;
-    display: block;
+    
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.cat-links a:hover,
-.cat-links a.active {
-    color: #d35400; /* Orange active state */
+.cat-item a i {
+    font-size: 1.2rem;
+    font-weight: normal;
 }
 
-/* Sidebar CTA (Optional) */
+/* Hover State */
+.cat-item a:hover {
+    background-color: #fff3e0;
+    color: #d35400;
+    transform: translateX(-5px);
+}
+
+/* ACTIVE STATE (Force Orange) */
+.cat-item a.active {
+    background-color: #fff3e0 !important;
+    color: #d35400 !important;
+    border-left: 4px solid #d35400;
+    padding-left: 11px;
+}
+
+/* Sidebar CTA */
 .sidebar-cta {
-    background-color: #fffbf5; /* Very light orange */
+    background-color: #fffbf5;
     padding: 20px;
     border-radius: 12px;
     margin-top: 40px;
@@ -142,14 +170,15 @@
     text-decoration: underline;
 }
 
-/* --- MAIN CONTENT (GRID) --- */
+/* =========================================
+   4. MAIN CONTENT (GRID)
+   ========================================= */
 .blog-content {
-    flex: 1; /* Takes remaining space */
+    flex: 1;
 }
 
 .articles-grid {
     display: grid;
-    /* 2 Columns matches the "Untitled UI" reference perfectly */
     grid-template-columns: repeat(2, 1fr); 
     gap: 40px;
     margin-bottom: 60px;
@@ -159,7 +188,6 @@
 .blog-card {
     display: flex;
     flex-direction: column;
-    /* No border or shadow initially for the clean look */
     transition: transform 0.3s ease;
 }
 
@@ -192,7 +220,7 @@
 .card-title-link {
     text-decoration: none;
     display: flex;
-    justify-content: space-between; /* Pushes arrow to the left */
+    justify-content: space-between;
     align-items: flex-start;
     color: #2d3436;
     margin-bottom: 10px;
@@ -208,8 +236,8 @@
 
 .arrow-icon {
     font-size: 1.4rem;
-    margin-right: 15px; /* Space between text and arrow */
-    transform: rotate(0deg); 
+    margin-right: 15px;
+    transform: rotate(180deg); /* Fixed for RTL arrow */
     transition: transform 0.2s;
 }
 
@@ -218,7 +246,7 @@
 }
 
 .blog-card:hover .arrow-icon {
-    transform: translate(-3px, -3px);
+    transform: translate(-3px, -3px) rotate(180deg);
 }
 
 .card-excerpt {
@@ -226,8 +254,8 @@
     line-height: 1.6;
     margin-bottom: 20px;
     font-size: 1rem;
-    /* Limit to 2 lines */
     display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limits text to 2 lines */
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -237,7 +265,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-top: auto; /* Pushes to bottom */
+    margin-top: auto;
 }
 
 .card-author img {
@@ -264,7 +292,9 @@
     color: #b2bec3;
 }
 
-/* --- PAGINATION (Untitled UI Style) --- */
+/* =========================================
+   5. PAGINATION
+   ========================================= */
 .pagination-clean {
     display: flex;
     justify-content: space-between;
@@ -306,7 +336,7 @@
 }
 
 .pagination-clean .pages a.active {
-    background-color: #fff3e0; /* Very light orange */
+    background-color: #fff3e0;
     color: #d35400;
     font-weight: 700;
 }
@@ -315,7 +345,9 @@
     background-color: #f1f2f6;
 }
 
-/* --- MOBILE RESPONSIVE --- */
+/* =========================================
+   6. MOBILE RESPONSIVE
+   ========================================= */
 @media (max-width: 992px) {
     .blog-container {
         flex-direction: column;
@@ -324,27 +356,28 @@
     .blog-sidebar {
         width: 100%;
         position: static;
-        order: -1; /* Puts search bar ON TOP on mobile */
+        order: -1; 
         margin-bottom: 40px;
     }
     
     .categories-widget, .sidebar-cta {
-        display: none; /* Hide categories on mobile to save space, or style differently */
+        display: none; 
     }
     
-    /* On Mobile, Show categories as horizontal scroll */
+    /* Show categories as horizontal scroll on mobile */
     .blog-sidebar .categories-widget {
         display: block;
     }
     
-    .cat-links {
+    /* UPDATED: Target new class names for Mobile */
+    .category-list {
         display: flex;
         overflow-x: auto;
         gap: 15px;
         padding-bottom: 10px;
     }
     
-    .cat-links a {
+    .cat-item a {
         white-space: nowrap;
         background: #f1f2f6;
         padding: 8px 15px;
@@ -354,7 +387,7 @@
 
 @media (max-width: 768px) {
     .articles-grid {
-        grid-template-columns: 1fr; /* 1 Column on phones */
+        grid-template-columns: 1fr;
     }
     
     .blog-title {

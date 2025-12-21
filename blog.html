@@ -81,18 +81,46 @@
             <input type="text" placeholder="بحث..." />
           </div>
 
-          <!-- Categories Menu -->
+          <!-- Categories Widget (Styled like Landing Page) -->
           <div class="categories-widget">
             <h3>التصنيفات</h3>
-            <ul class="cat-links">
-              <!-- 1. "All" Filter -->
-              <li><a href="#" class="active" data-filter="all">عرض الكل</a></li>
 
-              <!-- 2. Specific Filters (English names are easier for code) -->
-              <li><a href="#" data-filter="sports">الأنشطة الرياضية</a></li>
-              <li><a href="#" data-filter="training">ورشات التكوين</a></li>
-              <li><a href="#" data-filter="arts">الفنون والثقافة</a></li>
-              <li><a href="#" data-filter="camps">المخيمات الصيفية</a></li>
+            <!-- We use 'category-list' and 'cat-item' to match your Main CSS -->
+            <ul class="category-list">
+              <!-- 1. All -->
+              <li class="cat-item">
+                <a href="#" class="active" data-filter="all">
+                  <i class="ri-layout-grid-line"></i> عرض الكل
+                </a>
+              </li>
+
+              <!-- 2. Sports -->
+              <li class="cat-item">
+                <a href="#" data-filter="sports">
+                  <i class="ri-football-line"></i> الأنشطة الرياضية
+                </a>
+              </li>
+
+              <!-- 3. Training -->
+              <li class="cat-item">
+                <a href="#" data-filter="training">
+                  <i class="ri-slideshow-line"></i> ورشات التكوين
+                </a>
+              </li>
+
+              <!-- 4. Arts -->
+              <li class="cat-item">
+                <a href="#" data-filter="arts">
+                  <i class="ri-palette-line"></i> الفنون والثقافة
+                </a>
+              </li>
+
+              <!-- 5. Camps -->
+              <li class="cat-item">
+                <a href="#" data-filter="camps">
+                  <i class="ri-tent-line"></i> المخيمات الصيفية
+                </a>
+              </li>
             </ul>
           </div>
 
