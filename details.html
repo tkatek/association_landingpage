@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دوري كرة القدم المصغر - دار الشباب</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="blog.css" /> <!-- We reuse the container/grid logic -->
+    <link rel="stylesheet" href="details.css" /> <!-- New styles for this page -->
+</head>
+<body>
+
+    <!-- 1. NAVBAR (Same as always) -->
+    <nav class="navbar">
+        <div class="hamburger"><i class="ri-menu-3-line"></i></div>
+        <a href="index.html" class="logo-link">
+            <img src="/media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png" alt="Logo" class="logo-img" />
+        </a>
+        <div class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="index.html#home"> الرئيسية</a></li>
+                <li><a href="index.html#about"> من نحن</a></li>
+                <li><a href="activities.html" class="active-link">الأنشطة والبرامج</a></li>
+                <li><a href="index.html#contact">تواصل معنا</a></li>
+            </ul>
+            <a href="index.html#contact" class="see-more-btn">انضم إلينا</a>
+        </div>
+    </nav>
+
+    <!-- 2. ARTICLE HEADER (Title & Image) -->
+    <header class="article-header">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="activities.html">الأنشطة</a>
+                <i class="ri-arrow-left-s-line"></i>
+                <span class="current">الرياضة</span>
+            </div>
+
+            <h1 class="article-title">انطلاق دوري الأحياء لكرة القدم المصغرة في نسخته الخامسة</h1>
+            
+            <div class="article-meta">
+                <div class="author">
+                    <img src="media/74be43133c4bf56ef6a2a730831711fb-removebg-preview.png" alt="Admin">
+                    <span>بقلم: <strong>اللجنة الرياضية</strong></span>
+                </div>
+                <span class="meta-date">10 مارس 2024</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. MAIN CONTENT LAYOUT -->
+    <section class="article-content-section">
+        <div class="container article-layout">
+            
+            <!-- A. MAIN TEXT (Right Side) -->
+            <div class="main-text">
+                <!-- Main Cover Image -->
+                <div class="cover-image">
+                    <img src="media/football-team-players-field.jpg" alt="Cover Image">
+                </div>
+
+                <!-- Rich Text Content -->
+                <div class="typography">
+                    <p class="lead">
+                        وسط أجواء حماسية وحضور جماهيري غفير، انطلقت فعاليات دوري رمضان لكرة القدم المصغرة، الذي تنظمه دار الشباب كبور الشهداء بشراكة مع جمعيات الأحياء.
+                    </p>
+                    
+                    <h3>أهداف النشاط</h3>
+                    <p>
+                        يهدف هذا الدوري إلى تعزيز الروح الرياضية بين شباب المنطقة، وخلق فضاء للتنافس الشريف، بالإضافة إلى اكتشاف المواهب الكروية الصاعدة التي يمكن تأطيرها مستقبلاً في أندية محترفة.
+                    </p>
+                    
+                    <h3>تفاصيل المنافسة</h3>
+                    <ul>
+                        <li>يشارك في الدوري 16 فريقاً يمثلون مختلف أحياء المدينة القديمة.</li>
+                        <li>تجرى المباريات بنظام المجموعات، يتأهل الأول والثاني من كل مجموعة.</li>
+                        <li>تدار المباريات من طرف حكام معتمدين من العصبة الجهوية.</li>
+                    </ul>
+
+                    <h3>معرض الصور</h3>
+                    <!-- Simple Gallery Grid -->
+                    <div class="mini-gallery">
+                        <img src="media/football-team-players-field.jpg" alt="Gallery 1">
+                        <img src="media/business-success-concept-wooden-table-top-view-hands-protecting-wooden-figures-people.jpg" alt="Gallery 2">
+                    </div>
+
+                    <p>
+                        ندعو جميع سكان الحي للحضور وتشجيع الفرق المشاركة، في جو يسوده الاحترام والروح الرياضية العالية.
+                    </p>
+                </div>
+            </div>
+
+            <!-- B. INFO SIDEBAR (Left Side - Sticky) -->
+            <aside class="info-sidebar">
+                
+                <!-- Event Info Card -->
+                <div class="event-card">
+                    <h3>معلومات النشاط</h3>
+                    
+                    <ul class="event-details-list">
+                        <li>
+                            <i class="ri-calendar-event-line"></i>
+                            <div>
+                                <span class="label">التاريخ</span>
+                                <span class="value">10 - 30 مارس 2024</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ri-time-line"></i>
+                            <div>
+                                <span class="label">التوقيت</span>
+                                <span class="value">يومياً: 16:00 - 19:00</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ri-map-pin-line"></i>
+                            <div>
+                                <span class="label">المكان</span>
+                                <span class="value">ملعب القرب، دار الشباب</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ri-ticket-line"></i>
+                            <div>
+                                <span class="label">رسوم المشاركة</span>
+                                <span class="value free">مجاناً</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Register Button -->
+                    <a href="#register" class="register-btn">
+                        سجل الآن <i class="ri-arrow-left-line"></i>
+                    </a>
+                </div>
+
+                <!-- Share Widget -->
+                <div class="share-widget">
+                    <span>شارك النشاط:</span>
+                    <div class="share-icons">
+                        <a href="#"><i class="ri-whatsapp-line"></i></a>
+                        <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+                        <a href="#"><i class="ri-twitter-x-line"></i></a>
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+    </section>
+
+    <!-- 4. FOOTER + JS -->
+    <!-- ... Paste Footer ... -->
+    <script src="script.js"></script>
+</body>
+</html>
