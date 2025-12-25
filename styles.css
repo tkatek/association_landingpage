@@ -1493,7 +1493,8 @@ ul {
    
   }
   .footer-col {
-    width: 80%;
+    width: 60%;
+    min-width: 200px;
     margin: auto;
   }
   .copy-content {
