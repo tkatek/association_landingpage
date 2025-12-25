@@ -1488,6 +1488,13 @@ ul {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+
+    
+   
+  }
+  .footer-col {
+    width: 80%;
+    margin: auto;
   }
   .copy-content {
     flex-direction: column;
